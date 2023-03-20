@@ -1,0 +1,57 @@
+@import "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+%container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+%title{
+    font-family: $main-font,'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: $title;
+    line-height: 45.5px;
+}
+
+%subtitle{
+    font-family: $main-font,'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: $subtitle;
+    line-height: 23px;
+}
+
+%text{
+    font-family: $secont-font, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: $text;
+    line-height: 24px;
+}
+
+%btn{
+    font-family: $secont-font, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: $btn;
+    line-height: 22.1px;
+}

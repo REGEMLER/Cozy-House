@@ -26,11 +26,18 @@ a {
   padding: 0 40px;
 }
 
-.about .about-content .about-title, .not-only .no-content .no-title, .header-menu .logo .logo-title {
+.friends .friends-title, .about .about-content .about-title, .not-only .no-content .no-title, .header-menu .logo .logo-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
+}
+
+.friends-slider .friends-cards .friend-card .friend-subtitle {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
 }
 
 .about .about-content .about-text, .not-only .no-content .no-text, .header-menu .header-menu-item {
@@ -40,13 +47,36 @@ a {
   line-height: 24px;
 }
 
-.not-only .no-content .no-btn {
+.friends-slider .friends-cards .friend-card .freind-card-btn, .friends .friends-btn, .not-only .no-content .no-btn {
   font-family: "Arial", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 22.1px;
 }
 
+@-webkit-keyframes rotating {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+  100% {
+    transform: rotateZ(-15deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+  100% {
+    transform: rotateZ(-15deg);
+  }
+}
 .wrapper {
   max-width: 1280px;
   min-width: 320px;
@@ -149,6 +179,7 @@ a {
 }
 .not-only .no-content .no-btn:active {
   transform: scale(0.95);
+  background-color: #F1CDB3;
 }
 .not-only .no-img {
   width: 700px;
@@ -186,11 +217,141 @@ a {
   max-width: 370px;
   margin-bottom: 25px;
   padding-top: 10px;
+  color: #545454;
 }
 .about .about-content .about-text {
   max-width: 430px;
   margin-bottom: 25px;
+  color: #4C4C4C;
 }
 .about .about-content .about-text:nth-child(3) {
   margin-bottom: 0;
+}
+
+.friends {
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 40px;
+  background-color: #F6F6F6;
+}
+.friends .friends-title {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  color: #545454;
+  letter-spacing: 0.05em;
+}
+.friends .friends-btn {
+  color: #292929;
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  height: 50px;
+  padding: 15px 45px;
+  border-radius: 100px;
+  background-color: #F1CDB3;
+  border-radius: 100px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  transition: background-color linear 1s, transform linear 1s;
+}
+.friends .friends-btn:hover {
+  background-color: #FDDCC4;
+  transform: scale(1.05);
+}
+.friends .friends-btn:active {
+  transform: scale(0.95);
+  background-color: #F1CDB3;
+}
+
+.friends-slider {
+  width: 100%;
+  margin: 65px auto;
+  position: relative;
+  margin-bottom: 60px;
+}
+.friends-slider .friends-arrows {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.friends-slider .friends-arrows .friend-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.friends-slider .friends-arrows .friend-arrow img {
+  width: 14px;
+  height: 6px;
+}
+.friends-slider .friends-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.friends-slider .friends-cards .friend-card {
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 90px;
+  cursor: pointer;
+  transition: -webkit-animation linear 2s;
+  transition: animation linear 2s;
+  transition: animation linear 2s, -webkit-animation linear 2s;
+}
+.friends-slider .friends-cards .friend-card:hover {
+  -webkit-animation: rotating 2s;
+          animation: rotating 2s;
+}
+.friends-slider .friends-cards .friend-card .friend-img {
+  width: 270px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform linear 1s;
+}
+.friends-slider .friends-cards .friend-card .friend-img:hover {
+  transform: rotateY(180deg);
+}
+.friends-slider .friends-cards .friend-card .friend-img img {
+  width: 100%;
+  height: 100%;
+}
+.friends-slider .friends-cards .friend-card .friend-subtitle {
+  text-align: center;
+  color: #545454;
+  margin-top: 30px;
+  letter-spacing: 0.06em;
+}
+.friends-slider .friends-cards .friend-card .freind-card-btn {
+  display: block;
+  width: 185px;
+  margin: 32px auto;
+  height: 50px;
+  color: #292929;
+  padding: 15px 45px;
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color linear 1s, transform linear 1s;
+}
+.friends-slider .friends-cards .friend-card .freind-card-btn:hover {
+  background-color: #FDDCC4;
+  transform: scale(1.05);
+}
+.friends-slider .friends-cards .friend-card .freind-card-btn:active {
+  transform: scale(0.95);
+  background-color: #F1CDB3;
+}
+.friends-slider .friends-cards .friend-card:nth-child(3) {
+  margin-right: 0;
 }/*# sourceMappingURL=style.css.map */

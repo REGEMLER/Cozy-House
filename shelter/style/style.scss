@@ -1,5 +1,6 @@
 @import "variables";
 @import "common";
+@import "animation";
 
 
 .wrapper{
@@ -131,6 +132,7 @@
 
             &:active{
                 transform: scale(0.95);
+                background-color: $primary-color;
             }
         }
     }
@@ -174,16 +176,165 @@
             max-width: 370px;
             margin-bottom: 25px;
             padding-top: 10px;
+            color: $color-title; 
         }
 
         .about-text{
             @extend %text; 
             max-width: 430px;
             margin-bottom: 25px;
+            color: $color-text;
         }
 
         .about-text:nth-child(3){
             margin-bottom: 0;
+        }
+    }
+}
+
+.friends{
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px 40px;
+    background-color: $color-gray;
+
+    .friends-title{
+        @extend %title; 
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-title;
+        letter-spacing: 0.05em;
+    }
+
+    .friends-btn{
+        @extend %btn; 
+        color: $color-btn;
+        display: block;
+        width: 260px;
+        margin: 0 auto;
+        height: 50px;
+        padding: 15px 45px;
+        border-radius: 100px;
+        background-color: $primary-color;
+        border-radius: 100px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        transition:  background-color linear 1s, transform linear 1s;
+
+        &:hover{
+            background-color: $light-color;
+            transform: scale(1.05);
+        }
+
+        &:active{
+            transform: scale(0.95);
+            background-color: $primary-color;
+        }
+    }
+}
+
+.friends-slider{
+    width: 100%;
+    margin: 65px auto;
+    position: relative;
+    margin-bottom: 60px;
+
+    .friends-arrows{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .friend-arrow{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 14px;
+                height: 6px;
+            }
+        }
+    }
+
+    .friends-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .friend-card{
+            background-color: $color-white;
+            border-radius: 9px 9px 0px 0px;
+            margin-right: 90px;
+            cursor: pointer;
+            transition: animation linear 2s;
+
+            &:hover{
+                animation: rotating 2s;
+            }
+             
+
+            .friend-img{
+                width: 270px;
+                height: 270px;
+                object-fit: cover;
+                transition: transform linear 1s;
+
+                &:hover{
+                    transform: rotateY(180deg);
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .friend-subtitle{
+                @extend %subtitle; 
+                text-align: center;
+                color: $color-title;
+                margin-top: 30px;
+                letter-spacing: 0.06em;
+            }
+
+            .freind-card-btn{
+                @extend %btn; 
+                display: block;
+                width: 185px;
+                margin: 32px auto;
+                height: 50px;
+                color: $color-btn;
+                padding: 15px 45px;
+                border-radius: 100px;
+                border: 2px solid $primary-color;
+                background-color: $color-white;
+                cursor: pointer;
+                transition:  background-color linear 1s, transform linear 1s;
+
+                &:hover{
+                    background-color: $light-color;
+                    transform: scale(1.05);
+                }
+        
+                &:active{
+                    transform: scale(0.95);
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .friend-card:nth-child(3){
+            margin-right: 0;
         }
     }
 }

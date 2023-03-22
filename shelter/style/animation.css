@@ -3,10 +3,10 @@
     transform: rotateZ(0);
   }
   50% {
-    transform: rotateZ(15deg);
+    transform: rotateZ(10deg);
   }
   100% {
-    transform: rotateZ(-15deg);
+    transform: rotateZ(-10deg);
   }
 }
 @keyframes rotating {
@@ -14,9 +14,9 @@
     transform: rotateZ(0);
   }
   50% {
-    transform: rotateZ(15deg);
+    transform: rotateZ(10deg);
   }
   100% {
-    transform: rotateZ(-15deg);
+    transform: rotateZ(-10deg);
   }
 }/*# sourceMappingURL=animation.css.map */

@@ -342,7 +342,7 @@
 .help{
     width: 100%;
     margin: 0 auto;
-    padding: 90px 0;
+    padding: 90px 0 35px 0;
     background-color: $color-white;
 
     .help-title{
@@ -429,4 +429,93 @@
 .grid-item9{
     grid-row: 2 / 4;
     grid-column: 8 / 10;
+}
+
+.donation{
+    width: 100%;
+    margin: 0 auto;
+    padding: 85px 180px;
+    background-color: $color-gray;
+    display: flex;
+}
+
+.donation-img{
+    width: 505px;
+    height: 260px;
+    object-fit: cover;
+    margin-right: 30px;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.donation-title{
+    @extend %title; 
+    width: 270px;
+    letter-spacing: 0.06em;
+    color: $color-title;
+    margin-bottom: 20px;
+}
+
+.donation-subtitle{
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: $text;
+    line-height: 16.5px;
+    letter-spacing: 0.06em;
+    color: $color-title;
+    margin-bottom: 20px;
+}
+
+.donation-card{
+    width: 345px;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 9px;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition:  background-color linear 1s, transform linear 1s;
+
+    &:hover{
+        background-color: $light-color;
+        transform: scale(1.05);
+    }
+        
+    &:active{
+        transform: scale(0.95);
+        background-color: $primary-color;
+    }
+
+    .donation-card-img{
+        width: 30px;
+        height: 23px;
+        object-fit: cover;
+        margin-right: 15px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .donation-link{
+        @extend %subtitle; 
+        letter-spacing: 0.06em;
+        color: $color-title;
+    }
+}
+
+.donation-text{
+    max-width: 380px;
+    font-family: $secont-font;
+    font-weight: 400;
+    font-size: $italic;
+    font-style: italic;
+    line-height: 18px;
+    color: $color-italic;
 }

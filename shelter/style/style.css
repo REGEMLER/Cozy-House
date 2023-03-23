@@ -54,6 +54,13 @@ a {
   line-height: 22.1px;
 }
 
+.wrapper {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 @-webkit-keyframes rotating {
   0% {
     transform: rotateZ(0);
@@ -77,13 +84,6 @@ a {
     transform: rotateZ(-10deg);
   }
 }
-.wrapper {
-  max-width: 1280px;
-  min-width: 320px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 .header {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -526,6 +526,69 @@ a {
   font-style: italic;
   line-height: 18px;
   color: #B2B2B2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer, .header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-item .footer-title, .header-menu .logo .logo-title, .not-only .no-content .no-title, .about .about-content .about-title, .friends .friends-title, .help .help-title, .donation-title {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45.5px;
+}
+
+.footer-item .footer-link, .friends-slider .friends-cards .friend-card .friend-subtitle, .help-grid .grid-item .help-subtitle, .donation-card .donation-link {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.header-menu .header-menu-item, .not-only .no-content .no-text, .about .about-content .about-text {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.not-only .no-content .no-btn, .friends .friends-btn, .friends-slider .friends-cards .friend-card .freind-card-btn {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22.1px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .footer {

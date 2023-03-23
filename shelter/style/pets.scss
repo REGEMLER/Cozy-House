@@ -1,0 +1,88 @@
+@import "variables";
+@import "common";
+@import "animation";
+
+.header-nav{
+    @extend %container; 
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+
+    .logo{
+        margin-right: 565px;
+        cursor: pointer;
+
+        .logo-title{
+            @extend %title;
+            line-height: 35.2px;
+            color: $color-title;
+            margin-bottom: 10px;
+            letter-spacing: 0.06em;
+        }
+
+        .logo-text{
+            font-family: $secont-font;
+            font-weight: 400;
+            font-size: $modal-text;
+            line-height: 15px;
+            color: $color-btn;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .header-menu-item{
+        @extend %text; 
+        margin-right: 35px;
+        transition: border-bottom linear 0.4s;
+
+        a{
+            color: $color-title;
+            transition: color linear 1s;
+        }
+    }
+
+    .header-menu-item:nth-child(5){
+        margin-right: 0;
+    }
+
+    .header-menu-item__active{
+        border-bottom: 3px solid $primary-color;
+
+        a{
+            color: $color-btn;
+        }
+    }
+
+    .header-menu-item__passive{
+
+        &:hover{
+
+            a{
+                color: $primary-color;
+            }
+        }
+
+        &:active{
+            border-bottom: 3px solid $primary-color;
+
+            a{
+                color: $color-btn
+            }
+        }
+    }
+
+    .hamburger{
+        display: none;
+    }
+}
+
+.main{
+    @extend %container;
+    height: 1400px;
+    background-color: aqua
+}
+
+@import "footer";

@@ -437,6 +437,7 @@
     padding: 85px 180px;
     background-color: $color-gray;
     display: flex;
+    padding-bottom: 95px;
 }
 
 .donation-img{
@@ -519,3 +520,64 @@
     line-height: 18px;
     color: $color-italic;
 }
+
+.footer{
+    @extend %container;
+    background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); 
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer-item{
+
+    .footer-title{
+        @extend %title; 
+        color: $color-white;
+        max-width: 275px;
+        letter-spacing: 0.06em;
+        margin-bottom: 30px;
+        margin-right: 160px;
+        margin-top: 20px;
+    }
+
+    .footer-link{
+        @extend %subtitle; 
+        display: block;
+        color: $primary-color;
+        margin-bottom: 35px;
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+
+        &::before{
+            content: url(../icons/icon-marker.svg);
+            margin-right: 20px;
+        }
+    }
+
+    .footer-mail{
+        &::before{
+            content: url(../icons/icon-email.svg);
+        }
+    }
+
+    .footer-tel{
+        &::before{
+            content: url(../icons/icon-phone.svg);
+        }
+    }
+
+    .footer-img{
+        width: 300px;
+        height: 310px;
+        object-fit: cover;
+    
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+

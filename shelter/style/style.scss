@@ -14,12 +14,14 @@
     padding: 30px 0;
 
     .logo{
-        margin-right: 565px;
+        margin-right: 570px;
         cursor: pointer;
 
         .logo-title{
-            @extend %title;
             display: block;
+            font-family: $main-font 'Times New Roman', Times, serif;
+            font-weight: 400;
+            font-size: $logo;
             line-height: 35.2px;
             color: $primary-color;
             margin-bottom: 10px;
@@ -56,7 +58,7 @@
         }
     }
 
-    .header-menu-item:nth-child(5){
+    .header-menu-item:nth-child(4){
         margin-right: 0;
     }
 
@@ -96,7 +98,8 @@
         margin-right: 40px;
 
         .not-only-title{
-            @extend %title; 
+            font-family: $main-font 'Times New Roman', Times, serif;
+            font-weight: 400;
             font-size: $h1;
             line-height: 57.2px;
             color: $color-white;
@@ -154,6 +157,7 @@
     padding: 80px 215px;
     display: flex;
     background-color: $color-white;
+    padding-bottom: 90px;
 
     .about-photo{
         width: 300px;
@@ -194,7 +198,8 @@
 .friends{
     width: 100%;
     margin: 0 auto;
-    padding: 90px 40px;
+    padding: 85px 40px;
+    padding-bottom: 90px;
     background-color: $color-gray;
 
     .friends-title{
@@ -235,7 +240,7 @@
 
 .friends-slider{
     width: 100%;
-    margin: 65px auto;
+    margin: 60px auto;
     position: relative;
     margin-bottom: 60px;
 
@@ -257,6 +262,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+            transition:  background-color linear 1s, transform linear 1s;
+
+            &:hover{
+                transform: scale(1.05);
+            }
+    
+            &:active{
+                transform: scale(0.95);
+                background-color: $primary-color;
+            }
 
             img{
                 width: 14px;
@@ -281,7 +297,6 @@
                 animation: rotating 2s;
             }
              
-
             .friend-img{
                 width: 270px;
                 height: 270px;
@@ -521,64 +536,3 @@
 }
 
 @import "footer";
-
-// .footer{
-//     @extend %container;
-//     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); 
-//     display: flex;
-//     justify-content: space-between;
-//     padding-top: 40px;
-// }
-
-// .footer-item{
-
-//     .footer-title{
-//         @extend %title; 
-//         color: $color-white;
-//         max-width: 275px;
-//         letter-spacing: 0.06em;
-//         margin-bottom: 30px;
-//         margin-right: 160px;
-//         margin-top: 20px;
-//     }
-
-//     .footer-link{
-//         @extend %subtitle; 
-//         display: block;
-//         color: $primary-color;
-//         margin-bottom: 35px;
-//         max-width: 250px;
-//         display: flex;
-//         align-items: center;
-
-//         &::before{
-//             content: url(../icons/icon-marker.svg);
-//             margin-right: 20px;
-//         }
-//     }
-
-//     .footer-mail{
-//         &::before{
-//             content: url(../icons/icon-email.svg);
-//         }
-//     }
-
-//     .footer-tel{
-//         &::before{
-//             content: url(../icons/icon-phone.svg);
-//         }
-//     }
-
-//     .footer-img{
-//         width: 300px;
-//         height: 310px;
-//         object-fit: cover;
-    
-//         img{
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-    
-// }
-

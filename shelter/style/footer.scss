@@ -17,8 +17,7 @@
         max-width: 275px;
         letter-spacing: 0.06em;
         margin-bottom: 30px;
-        margin-right: 160px;
-        margin-top: 20px;
+        margin-top: 20px;;
     }
 
     .footer-link{
@@ -37,12 +36,14 @@
     }
 
     .footer-mail{
+        letter-spacing: 0.06em;
         &::before{
             content: url(../icons/icon-email.svg);
         }
     }
 
     .footer-tel{
+        letter-spacing: 0.06em;
         &::before{
             content: url(../icons/icon-phone.svg);
         }

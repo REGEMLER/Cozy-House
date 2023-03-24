@@ -3,21 +3,21 @@
 @import "animation";
 
 .header-nav{
-    @extend %container; 
-}
-
-.header-menu{
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 40px;
     display: flex;
     align-items: center;
-    padding: 30px 0;
 
     .logo{
-        margin-right: 565px;
+        margin-right: 570px;
         cursor: pointer;
 
         .logo-title{
             display: block;
-            @extend %title;
+            font-family: $main-font 'Times New Roman', Times, serif;
+            font-weight: 400;
+            font-size: $logo;
             line-height: 35.2px;
             color: $color-title;
             margin-bottom: 10px;
@@ -29,10 +29,19 @@
             font-weight: 400;
             font-size: $modal-text;
             line-height: 15px;
-            color: $color-btn;
+            color: $color-white;
             letter-spacing: 0.1em;
         }
     }
+
+    .hamburger{
+        display: none;
+    }
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
 
     .header-menu-item{
         @extend %text; 
@@ -45,7 +54,7 @@
         }
     }
 
-    .header-menu-item:nth-child(5){
+    .header-menu-item:nth-child(4){
         margin-right: 0;
     }
 
@@ -100,6 +109,7 @@
     margin: 60px auto;
     display: grid; 
     grid-row-gap: 30px;
+    grid-column-gap: 25px;
     grid-template-areas: 
                         "a b c d"
                         "e f g h"; 
@@ -199,10 +209,9 @@
 }
 
 .pets-pagination{
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
-    padding-bottom: 100px;
-    outline: 1px solid red; 
+    padding-bottom: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center; 

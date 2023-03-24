@@ -20,13 +20,13 @@ a {
   text-decoration: none;
 }
 
-.footer, .main, .header-nav {
+.footer, .main {
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.footer-item .footer-title, .main .pets-title, .header-menu .logo .logo-title {
+.footer-item .footer-title, .main .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
@@ -66,10 +66,10 @@ a {
     transform: rotateZ(0);
   }
   50% {
-    transform: rotateZ(10deg);
+    transform: rotateZ(5deg);
   }
   100% {
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-5deg);
   }
 }
 
@@ -78,35 +78,48 @@ a {
     transform: rotateZ(0);
   }
   50% {
-    transform: rotateZ(10deg);
+    transform: rotateZ(5deg);
   }
   100% {
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-5deg);
   }
 }
-.header-menu {
+.header-nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 40px;
   display: flex;
   align-items: center;
-  padding: 30px 0;
 }
-.header-menu .logo {
-  margin-right: 565px;
+.header-nav .logo {
+  margin-right: 570px;
   cursor: pointer;
 }
-.header-menu .logo .logo-title {
+.header-nav .logo .logo-title {
   display: block;
+  font-family: "Georgia" "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 32px;
   line-height: 35.2px;
   color: #545454;
   margin-bottom: 10px;
   letter-spacing: 0.06em;
 }
-.header-menu .logo .logo-text {
+.header-nav .logo .logo-text {
   font-family: "Arial";
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
-  color: #292929;
+  color: #FFFFFF;
   letter-spacing: 0.1em;
+}
+.header-nav .hamburger {
+  display: none;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
 }
 .header-menu .header-menu-item {
   margin-right: 35px;
@@ -116,7 +129,7 @@ a {
   color: #545454;
   transition: color linear 1s;
 }
-.header-menu .header-menu-item:nth-child(5) {
+.header-menu .header-menu-item:nth-child(4) {
   margin-right: 0;
 }
 .header-menu .header-menu-item__active {
@@ -155,6 +168,7 @@ a {
   margin: 60px auto;
   display: grid;
   grid-row-gap: 30px;
+  grid-column-gap: 25px;
   grid-template-areas: "a b c d" "e f g h";
 }
 .pets-grid .pet-card {
@@ -237,10 +251,9 @@ a {
 }
 
 .pets-pagination {
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
-  padding-bottom: 100px;
-  outline: 1px solid red;
+  padding-bottom: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -292,13 +305,13 @@ a {
   text-decoration: none;
 }
 
-.footer, .header-nav, .main {
+.footer, .main {
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.footer-item .footer-title, .header-menu .logo .logo-title, .main .pets-title {
+.footer-item .footer-title, .main .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
@@ -345,7 +358,6 @@ a {
   max-width: 275px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
-  margin-right: 160px;
   margin-top: 20px;
 }
 .footer-item .footer-link {
@@ -360,8 +372,14 @@ a {
   content: url(../icons/icon-marker.svg);
   margin-right: 20px;
 }
+.footer-item .footer-mail {
+  letter-spacing: 0.06em;
+}
 .footer-item .footer-mail::before {
   content: url(../icons/icon-email.svg);
+}
+.footer-item .footer-tel {
+  letter-spacing: 0.06em;
 }
 .footer-item .footer-tel::before {
   content: url(../icons/icon-phone.svg);

@@ -40,6 +40,13 @@ a {
   line-height: 23px;
 }
 
+.wrapper {
+  max-width: 1280px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;

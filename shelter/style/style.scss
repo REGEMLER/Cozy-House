@@ -8,7 +8,7 @@
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); 
 }
 
-.header-menu{
+.header-nav{
     display: flex;
     align-items: center;
     padding: 30px 0;
@@ -19,6 +19,7 @@
 
         .logo-title{
             @extend %title;
+            display: block;
             line-height: 35.2px;
             color: $primary-color;
             margin-bottom: 10px;
@@ -34,6 +35,15 @@
             letter-spacing: 0.1em;
         }
     }
+
+    .hamburger{
+        display: none;
+    }
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
 
     .header-menu-item{
         @extend %text; 
@@ -75,10 +85,6 @@
             }
         }
     }
-
-    .hamburger{
-        display: none;
-    }
 }
 
 .not-only{
@@ -86,10 +92,10 @@
     margin-top: 50px;
     padding-bottom: 10px;
 
-    .no-content{
+    .not-only-content{
         margin-right: 40px;
 
-        .no-title{
+        .not-only-title{
             @extend %title; 
             font-size: $h1;
             line-height: 57.2px;
@@ -100,14 +106,14 @@
             letter-spacing: 0.04em;
         }
 
-        .no-text{
+        .not-only-text{
             @extend %text;
             color: $color-link;
             margin-bottom: 45px;
             max-width: 460px;
         }
 
-        .no-btn{
+        .not-only-btn{
             @extend %btn; 
             display: block;
             width: 205px;
@@ -130,7 +136,7 @@
         }
     }
 
-    .no-img{
+    .not-only-img{
         width: 700px;
         height: 730px;
         object-fit: cover;

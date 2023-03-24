@@ -16,6 +16,7 @@
         cursor: pointer;
 
         .logo-title{
+            display: block;
             @extend %title;
             line-height: 35.2px;
             color: $color-title;
@@ -81,8 +82,160 @@
 
 .main{
     @extend %container;
-    height: 1400px;
-    background-color: aqua
+    background-color: $color-gray; 
+
+    .pets-title{
+        @extend %title;
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 80px;
+        letter-spacing: 0.06em;
+        color: $color-title; 
+    }
 }
+
+.pets-grid{
+    width: 100%;
+    margin: 60px auto;
+    display: grid; 
+    grid-row-gap: 30px;
+    grid-template-areas: 
+                        "a b c d"
+                        "e f g h"; 
+
+    .pet-card{
+        width: 270px;
+        background-color: $color-white;
+        border-radius: 9px 9px 0px 0px;
+        cursor: pointer;
+        transition: animation linear 2s;
+
+        &:hover{
+            animation: rotating 2s;
+        }
+             
+        .pet-img{
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            transition: transform linear 1s;
+
+            &:hover{
+                transform: rotateY(180deg);
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .pet-subtitle{
+            @extend %subtitle; 
+            text-align: center;
+            color: $color-title;
+            margin-top: 30px;
+            letter-spacing: 0.06em;
+        }
+
+        .pet-card-btn{
+            @extend %btn; 
+            display: block;
+            width: 185px;
+            margin: 32px auto;
+            height: 50px;
+            color: $color-btn;
+            padding: 15px 45px;
+            border-radius: 100px;
+            border: 2px solid $primary-color;
+            background-color: $color-white;
+            cursor: pointer;
+            transition:  background-color linear 1s, transform linear 1s;
+
+            &:hover{
+                background-color: $light-color;
+                transform: scale(1.05);
+            }
+        
+            &:active{
+                transform: scale(0.95);
+                background-color: $primary-color;
+            }
+        }
+
+        .pet-card1{
+            grid-area: a;
+        }
+
+        .pet-card2{
+            grid-area: b;
+        }
+
+        .pet-card3{
+            grid-area: c;
+        }
+
+        .pet-card4{
+            grid-area: d;
+        }
+
+        .pet-card5{
+            grid-area: e;
+        }
+
+        .pet-card6{
+            grid-area: f;
+        }
+
+        .pet-card7{
+            grid-area: g;
+        }
+
+        .pet-card8{
+            grid-area: h;
+        }
+    }
+}
+
+.pets-pagination{
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    outline: 1px solid red; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+    .pets-btn{
+        @extend %subtitle; 
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .pets-btn__desabled{
+        background-color: transparent;
+        border: 2px solid $color-link; 
+        color: $color-link; 
+    }
+
+    .pets-btn__enabled{
+        background-color: transparent;
+        border: 2px solid $primary-color; 
+        color: $color-btn;  
+    }
+
+    .page-number{
+        background-color: $primary-color;
+        color: $color-btn;  
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 @import "footer";

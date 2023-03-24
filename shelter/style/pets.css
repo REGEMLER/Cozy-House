@@ -26,14 +26,14 @@ a {
   padding: 0 40px;
 }
 
-.footer-item .footer-title, .header-menu .logo .logo-title {
+.footer-item .footer-title, .main .pets-title, .header-menu .logo .logo-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 
-.footer-item .footer-link {
+.footer-item .footer-link, .pets-pagination .pets-btn, .pets-grid .pet-card .pet-subtitle {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 20px;
@@ -45,6 +45,13 @@ a {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+}
+
+.pets-grid .pet-card .pet-card-btn {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22.1px;
 }
 
 .wrapper {
@@ -87,6 +94,7 @@ a {
   cursor: pointer;
 }
 .header-menu .logo .logo-title {
+  display: block;
   line-height: 35.2px;
   color: #545454;
   margin-bottom: 10px;
@@ -131,8 +139,135 @@ a {
 }
 
 .main {
-  height: 1400px;
-  background-color: aqua;
+  background-color: #F6F6F6;
+}
+.main .pets-title {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.pets-grid {
+  width: 100%;
+  margin: 60px auto;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-areas: "a b c d" "e f g h";
+}
+.pets-grid .pet-card {
+  width: 270px;
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 0px 0px;
+  cursor: pointer;
+  transition: -webkit-animation linear 2s;
+  transition: animation linear 2s;
+  transition: animation linear 2s, -webkit-animation linear 2s;
+}
+.pets-grid .pet-card:hover {
+  -webkit-animation: rotating 2s;
+          animation: rotating 2s;
+}
+.pets-grid .pet-card .pet-img {
+  width: 270px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform linear 1s;
+}
+.pets-grid .pet-card .pet-img:hover {
+  transform: rotateY(180deg);
+}
+.pets-grid .pet-card .pet-img img {
+  width: 100%;
+  height: 100%;
+}
+.pets-grid .pet-card .pet-subtitle {
+  text-align: center;
+  color: #545454;
+  margin-top: 30px;
+  letter-spacing: 0.06em;
+}
+.pets-grid .pet-card .pet-card-btn {
+  display: block;
+  width: 185px;
+  margin: 32px auto;
+  height: 50px;
+  color: #292929;
+  padding: 15px 45px;
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color linear 1s, transform linear 1s;
+}
+.pets-grid .pet-card .pet-card-btn:hover {
+  background-color: #FDDCC4;
+  transform: scale(1.05);
+}
+.pets-grid .pet-card .pet-card-btn:active {
+  transform: scale(0.95);
+  background-color: #F1CDB3;
+}
+.pets-grid .pet-card .pet-card1 {
+  grid-area: a;
+}
+.pets-grid .pet-card .pet-card2 {
+  grid-area: b;
+}
+.pets-grid .pet-card .pet-card3 {
+  grid-area: c;
+}
+.pets-grid .pet-card .pet-card4 {
+  grid-area: d;
+}
+.pets-grid .pet-card .pet-card5 {
+  grid-area: e;
+}
+.pets-grid .pet-card .pet-card6 {
+  grid-area: f;
+}
+.pets-grid .pet-card .pet-card7 {
+  grid-area: g;
+}
+.pets-grid .pet-card .pet-card8 {
+  grid-area: h;
+}
+
+.pets-pagination {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  outline: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pets-pagination .pets-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pets-pagination .pets-btn__desabled {
+  background-color: transparent;
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+}
+.pets-pagination .pets-btn__enabled {
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+  color: #292929;
+}
+.pets-pagination .page-number {
+  background-color: #F1CDB3;
+  color: #292929;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -163,14 +298,14 @@ a {
   padding: 0 40px;
 }
 
-.footer-item .footer-title, .header-menu .logo .logo-title {
+.footer-item .footer-title, .header-menu .logo .logo-title, .main .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 
-.footer-item .footer-link {
+.footer-item .footer-link, .pets-grid .pet-card .pet-subtitle, .pets-pagination .pets-btn {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 20px;
@@ -182,6 +317,13 @@ a {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+}
+
+.pets-grid .pet-card .pet-card-btn {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22.1px;
 }
 
 .wrapper {

@@ -25,6 +25,11 @@ a {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media screen and (max-width: 800px) {
+  .footer, .main {
+    padding: 0 30px;
+  }
+}
 
 .footer-item .footer-title, .main .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -61,6 +66,21 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 800px) {
+  .big-img {
+    display: none;
+  }
+}
+
+.mid-img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .mid-img {
+    display: inline;
+  }
+}
+
 @-webkit-keyframes rotating {
   0% {
     transform: rotateZ(0);
@@ -91,9 +111,39 @@ a {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 800px) {
+  .header-nav {
+    padding: 30px;
+  }
+}
 .header-nav .logo {
   margin-right: 570px;
   cursor: pointer;
+}
+@media screen and (max-width: 1270px) {
+  .header-nav .logo {
+    margin-right: 44%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header-nav .logo {
+    margin-right: 35%;
+  }
+}
+@media screen and (max-width: 1035px) {
+  .header-nav .logo {
+    margin-right: 30%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .header-nav .logo {
+    margin-right: 20%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header-nav .logo {
+    margin-right: 80px;
+  }
 }
 .header-nav .logo .logo-title {
   display: block;
@@ -110,7 +160,7 @@ a {
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
-  color: #FFFFFF;
+  color: #292929;
   letter-spacing: 0.1em;
 }
 .header-nav .hamburger {
@@ -170,6 +220,18 @@ a {
   grid-row-gap: 30px;
   grid-column-gap: 25px;
   grid-template-areas: "a b c d" "e f g h";
+}
+@media screen and (max-width: 1200px) {
+  .pets-grid {
+    grid-template-areas: "a b c" "d e f" "g g h";
+  }
+}
+@media screen and (max-width: 900px) {
+  .pets-grid {
+    justify-items: center;
+    justify-content: center;
+    grid-template-areas: "a b" "c d" "e f" "g h";
+  }
 }
 .pets-grid .pet-card {
   width: 270px;
@@ -310,6 +372,11 @@ a {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media screen and (max-width: 800px) {
+  .footer, .main {
+    padding: 0 30px;
+  }
+}
 
 .footer-item .footer-title, .main .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -346,11 +413,32 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 800px) {
+  .big-img {
+    display: none;
+  }
+}
+
+.mid-img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .mid-img {
+    display: inline;
+  }
+}
+
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-item .footer-title {
@@ -389,6 +477,11 @@ a {
   height: 310px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+  .footer-item .footer-img {
+    flex-grow: 2;
+  }
 }
 .footer-item .footer-img img {
   width: 100%;

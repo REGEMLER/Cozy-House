@@ -25,4 +25,19 @@ a {
   min-width: 320px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .big-img {
+    display: none;
+  }
+}
+
+.mid-img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .mid-img {
+    display: inline;
+  }
 }/*# sourceMappingURL=common.css.map */

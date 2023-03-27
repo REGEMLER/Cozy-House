@@ -25,6 +25,11 @@ a {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 0 30px;
+  }
+}
 
 .footer-item .footer-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -47,11 +52,32 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 800px) {
+  .big-img {
+    display: none;
+  }
+}
+
+.mid-img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .mid-img {
+    display: inline;
+  }
+}
+
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-item .footer-title {
@@ -90,6 +116,11 @@ a {
   height: 310px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+  .footer-item .footer-img {
+    flex-grow: 2;
+  }
 }
 .footer-item .footer-img img {
   width: 100%;

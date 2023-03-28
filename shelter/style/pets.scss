@@ -157,13 +157,18 @@
 
     .pet-card{
         width: 270px;
-        background-color: $color-white;
+        background-color: $color-link-a;
         border-radius: 9px 9px 0px 0px;
         cursor: pointer;
-        transition: animation linear 2s;
+        transition: background-color linear 1s;
 
         &:hover{
-            animation: rotating 2s;
+            background-color: $color-white;
+
+            .pet-card-btn{
+                background-color: $light-color;
+                transform: scale(1.05);
+            }
         }
              
         .pet-img{
@@ -203,11 +208,6 @@
             background-color: $color-white;
             cursor: pointer;
             transition:  background-color linear 1s, transform linear 1s;
-
-            &:hover{
-                background-color: $light-color;
-                transform: scale(1.05);
-            }
         
             &:active{
                 transform: scale(0.95);
@@ -275,6 +275,11 @@
         background-color: transparent;
         border: 2px solid $primary-color; 
         color: $color-btn;  
+        transition: background-color linear 1s;
+
+        &:hover{
+            background-color: $light-color;
+        }
     }
 
     .page-number{

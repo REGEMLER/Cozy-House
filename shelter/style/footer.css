@@ -46,7 +46,8 @@ a {
 }
 
 .wrapper {
-  max-width: 1280px;
+  width: 100vw;
+  max-width: 1400px;
   min-width: 320px;
   margin: 0 auto;
   overflow: hidden;
@@ -70,7 +71,6 @@ a {
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;
-  justify-content: space-between;
   padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
@@ -125,4 +125,14 @@ a {
 .footer-item .footer-img img {
   width: 100%;
   height: 100%;
+}
+
+.footer-item1 {
+  max-width: 280px;
+  margin-right: 160px;
+}
+
+.footer-item2 {
+  max-width: 300px;
+  margin-right: 180px;
 }/*# sourceMappingURL=footer.css.map */

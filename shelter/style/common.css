@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul,
 ol,
 li {
@@ -21,10 +25,10 @@ a {
 }
 
 .wrapper {
-  max-width: 1280px;
+  width: 100vw;
+  max-width: 1400px;
   min-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {

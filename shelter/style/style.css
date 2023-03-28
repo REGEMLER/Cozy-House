@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul,
 ol,
 li {
@@ -53,17 +57,17 @@ a {
 }
 
 .friends-slider .friends-cards .friend-card .freind-card-btn, .friends .friends-btn, .not-only .not-only-content .not-only-btn {
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 22.1px;
 }
 
 .wrapper {
-  max-width: 1280px;
+  width: 100vw;
+  max-width: 1400px;
   min-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -332,61 +336,15 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 85px 40px;
-  padding-bottom: 90px;
   background-color: #F6F6F6;
-  position: relative;
 }
 @media screen and (max-width: 1050px) {
   .friends {
     padding: 85px 30px;
   }
 }
-.friends .friends-arrows {
-  position: absolute;
-  width: 94%;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (max-width: 1050px) {
-  .friends .friends-arrows {
-    width: 98%;
-    left: 1%;
-  }
-}
-@media screen and (max-width: 950px) {
-  .friends .friends-arrows {
-    width: 94%;
-    left: 3%;
-  }
-}
-.friends .friends-arrows .friend-arrow {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #F1CDB3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color linear 1s, transform linear 1s;
-}
-.friends .friends-arrows .friend-arrow:hover {
-  transform: scale(1.05);
-}
-.friends .friends-arrows .friend-arrow:active {
-  transform: scale(0.95);
-  background-color: #F1CDB3;
-}
-.friends .friends-arrows .friend-arrow img {
-  width: 14px;
-  height: 6px;
-}
 .friends .friends-title {
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
   text-align: center;
   color: #545454;
@@ -418,40 +376,58 @@ a {
 .friends-slider {
   width: 100%;
   margin: 60px auto;
-  margin-bottom: 60px;
 }
 .friends-slider .friends-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-.friends-slider .friends-cards .friend-card {
-  background-color: #FFFFFF;
-  border-radius: 9px 9px 0px 0px;
-  margin-right: 90px;
+.friends-slider .friends-cards .friend-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: -webkit-animation linear 2s;
-  transition: animation linear 2s;
-  transition: animation linear 2s, -webkit-animation linear 2s;
+  transition: background-color linear 1s, transform linear 1s;
 }
-@media screen and (max-width: 1200px) {
-  .friends-slider .friends-cards .friend-card {
-    margin-right: 40px;
-  }
+.friends-slider .friends-cards .friend-arrow:hover {
+  transform: scale(1.05);
+}
+.friends-slider .friends-cards .friend-arrow:active {
+  transform: scale(0.95);
+  background-color: #F1CDB3;
+}
+.friends-slider .friends-cards .friend-arrow img {
+  width: 14px;
+  height: 6px;
+}
+.friends-slider .friends-cards .friend-card {
+  width: 270px;
+  height: 435px;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+  border-radius: 9px 9px 0px 0px;
+  cursor: pointer;
+  transition: background-color linear 1s;
 }
 .friends-slider .friends-cards .friend-card:hover {
-  -webkit-animation: rotating 2s;
-          animation: rotating 2s;
+  background-color: #FFFFFF;
+}
+.friends-slider .friends-cards .friend-card:hover .freind-card-btn {
+  background-color: #FDDCC4;
+  transform: scale(1.05);
 }
 .friends-slider .friends-cards .friend-card .friend-img {
   width: 270px;
   height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform linear 1s;
-}
-.friends-slider .friends-cards .friend-card .friend-img:hover {
-  transform: rotateY(180deg);
 }
 .friends-slider .friends-cards .friend-card .friend-img img {
   width: 100%;
@@ -476,16 +452,9 @@ a {
   cursor: pointer;
   transition: background-color linear 1s, transform linear 1s;
 }
-.friends-slider .friends-cards .friend-card .freind-card-btn:hover {
-  background-color: #FDDCC4;
-  transform: scale(1.05);
-}
 .friends-slider .friends-cards .friend-card .freind-card-btn:active {
   transform: scale(0.95);
   background-color: #F1CDB3;
-}
-.friends-slider .friends-cards .friend-card:nth-child(3) {
-  margin-right: 0;
 }
 @media screen and (max-width: 950px) {
   .friends-slider .friends-cards .friend-card:nth-child(3) {
@@ -501,7 +470,7 @@ a {
 .help {
   width: 100%;
   margin: 0 auto;
-  padding: 90px 0 35px 0;
+  padding: 95px 0 35px 0;
   background-color: #FFFFFF;
 }
 .help .help-title {
@@ -633,10 +602,11 @@ a {
 .donation {
   width: 100%;
   margin: 0 auto;
-  padding: 85px 180px;
+  padding: 90px 0 95px 0;
   background-color: #F6F6F6;
   display: flex;
-  padding-bottom: 95px;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
   .donation {
@@ -651,11 +621,6 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 30px;
-}
-@media screen and (max-width: 900px) {
-  .donation-img {
-    margin-right: 0;
-  }
 }
 .donation-img img {
   width: 100%;
@@ -683,8 +648,8 @@ a {
   margin-bottom: 20px;
 }
 .donation-content .donation-card {
-  width: 345px;
-  height: 45px;
+  width: 349px;
+  height: 43px;
   padding: 10px 15px;
   border-radius: 9px;
   background-color: #F1CDB3;
@@ -714,7 +679,8 @@ a {
   height: 100%;
 }
 .donation-content .donation-card .donation-link {
-  letter-spacing: 0.06em;
+  display: block;
+  letter-spacing: 0.1em;
   color: #545454;
 }
 .donation-content .donation-text {
@@ -737,6 +703,10 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul,
@@ -782,17 +752,17 @@ a {
 }
 
 .not-only .not-only-content .not-only-btn, .friends .friends-btn, .friends-slider .friends-cards .friend-card .freind-card-btn {
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 22.1px;
 }
 
 .wrapper {
-  max-width: 1280px;
+  width: 100vw;
+  max-width: 1400px;
   min-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -813,7 +783,6 @@ a {
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   display: flex;
-  justify-content: space-between;
   padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
@@ -868,4 +837,14 @@ a {
 .footer-item .footer-img img {
   width: 100%;
   height: 100%;
+}
+
+.footer-item1 {
+  max-width: 280px;
+  margin-right: 160px;
+}
+
+.footer-item2 {
+  max-width: 300px;
+  margin-right: 180px;
 }/*# sourceMappingURL=style.css.map */

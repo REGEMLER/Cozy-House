@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul,
 ol,
 li {
@@ -18,17 +22,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-.footer {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-@media screen and (max-width: 800px) {
-  .footer {
-    padding: 0 30px;
-  }
 }
 
 .footer-item .footer-title {
@@ -47,10 +40,12 @@ a {
 
 .wrapper {
   width: 100vw;
-  max-width: 1400px;
-  min-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -68,13 +63,17 @@ a {
   }
 }
 
-.footer {
+.bg__footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.container__footer {
+  padding: 0 40px;
   display: flex;
   padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
-  .footer {
+  .container__footer {
     justify-content: center;
     flex-wrap: wrap;
   }

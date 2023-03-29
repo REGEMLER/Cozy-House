@@ -1,9 +1,12 @@
 @import "variables";
 @import "common";
 
-.footer{
-    @extend %container;
+.bg__footer{
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); 
+}
+
+.container__footer{
+    padding: 0 40px;
     display: flex;
     padding-top: 40px;
 

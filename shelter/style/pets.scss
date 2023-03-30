@@ -17,6 +17,10 @@
         padding: 30px;
     }
 
+    @media screen and (max-width: 767px){
+        justify-content: space-between;
+    }
+
     .logo{
         margin-right: 570px;
         cursor: pointer;
@@ -35,6 +39,10 @@
 
         @media screen and (max-width: 860px){
             margin-right: 80px;
+        }
+
+        @media screen and (max-width: 767px){
+            margin-right: 0px;
         }
 
         .logo-title{
@@ -60,12 +68,33 @@
 
     .hamburger{
         display: none;
+
+        @media screen and (max-width: 767px){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 22px;
+            width: 30px;
+         }
+ 
+         .hamburger-item{
+             width: 30px;
+             height: 2px;
+             background-color: $primary-color;
+         }
     }
 }
 
 .header-menu{
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 767px){
+        display: none;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
 
     .header-menu-item{
         @extend %text; 
@@ -106,10 +135,6 @@
                 color: $color-btn
             }
         }
-    }
-
-    .hamburger{
-        display: none;
     }
 }
 
@@ -156,6 +181,13 @@
         "c d"
         "e f";
         margin: 30px auto;
+    }
+
+    @media screen and (max-width: 550px){
+        grid-template-areas: 
+        "a"
+        "b"
+        "c";
     }
 
     .pet-card{
@@ -233,14 +265,26 @@
 
     .pet-card4{
         grid-area: d;
+
+        @media screen and (max-width: 550px){
+            display: none;
+        }
     }
 
     .pet-card5{
         grid-area: e;
+
+        @media screen and (max-width: 550px){
+            display: none;
+        }
     }
 
     .pet-card6{
         grid-area: f;
+
+        @media screen and (max-width: 550px){
+            display: none;
+        }
     }
 
     .pet-card7{
@@ -270,6 +314,10 @@
 
     @media screen and (max-width: 900px){
         padding-bottom: 75px;
+    }
+
+    @media screen and (max-width: 400px){
+        max-width: 300px;
     }
 
     .pets-btn{

@@ -30,6 +30,12 @@ a {
   font-size: 35px;
   line-height: 45.5px;
 }
+@media screen and (max-width: 550px) {
+  .footer-item .footer-title {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+}
 
 .footer-item .footer-link {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -60,6 +66,26 @@ a {
 @media screen and (max-width: 800px) {
   .mid-img {
     display: inline;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mid-img {
+    display: none;
+  }
+}
+
+.small-img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-img {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .regular-img {
+    display: none;
   }
 }
 
@@ -131,6 +157,12 @@ a {
 @media screen and (max-width: 900px) {
   .footer-item .footer-img {
     flex-grow: 2;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer-item .footer-img {
+    width: 260px;
+    height: 270px;
   }
 }
 .footer-item .footer-img img {

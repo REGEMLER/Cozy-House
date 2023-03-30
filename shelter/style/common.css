@@ -47,4 +47,24 @@ a {
   .mid-img {
     display: inline;
   }
+}
+@media screen and (max-width: 600px) {
+  .mid-img {
+    display: none;
+  }
+}
+
+.small-img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-img {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .regular-img {
+    display: none;
+  }
 }/*# sourceMappingURL=common.css.map */

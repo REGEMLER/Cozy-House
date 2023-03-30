@@ -30,6 +30,12 @@ a {
   font-size: 35px;
   line-height: 45.5px;
 }
+@media screen and (max-width: 550px) {
+  .footer-item .footer-title, .container__main-pets .pets-title {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+}
 
 .footer-item .footer-link, .pets-pagination .pets-btn, .pets-grid .pet-card .pet-subtitle {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -76,6 +82,26 @@ a {
     display: inline;
   }
 }
+@media screen and (max-width: 600px) {
+  .mid-img {
+    display: none;
+  }
+}
+
+.small-img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-img {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .regular-img {
+    display: none;
+  }
+}
 
 @-webkit-keyframes rotating {
   0% {
@@ -116,6 +142,11 @@ a {
     padding: 30px;
   }
 }
+@media screen and (max-width: 767px) {
+  .header-nav {
+    justify-content: space-between;
+  }
+}
 .header-nav .logo {
   margin-right: 570px;
   cursor: pointer;
@@ -140,6 +171,11 @@ a {
     margin-right: 80px;
   }
 }
+@media screen and (max-width: 767px) {
+  .header-nav .logo {
+    margin-right: 0px;
+  }
+}
 .header-nav .logo .logo-title {
   display: block;
   font-family: "Georgia" "Times New Roman", Times, serif;
@@ -161,10 +197,32 @@ a {
 .header-nav .hamburger {
   display: none;
 }
+@media screen and (max-width: 767px) {
+  .header-nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    width: 30px;
+  }
+}
+.header-nav .hamburger .hamburger-item {
+  width: 30px;
+  height: 2px;
+  background-color: #F1CDB3;
+}
 
 .header-menu {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header-menu {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 .header-menu .header-menu-item {
   margin-right: 35px;
@@ -191,9 +249,6 @@ a {
 }
 .header-menu .header-menu-item__passive:active a {
   color: #292929;
-}
-.header-menu .hamburger {
-  display: none;
 }
 
 .bg__main-pets {
@@ -231,6 +286,11 @@ a {
     justify-content: center;
     grid-template-areas: "a b" "c d" "e f";
     margin: 30px auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .pets-grid {
+    grid-template-areas: "a" "b" "c";
   }
 }
 .pets-grid .pet-card {
@@ -296,11 +356,26 @@ a {
 .pets-grid .pet-card4 {
   grid-area: d;
 }
+@media screen and (max-width: 550px) {
+  .pets-grid .pet-card4 {
+    display: none;
+  }
+}
 .pets-grid .pet-card5 {
   grid-area: e;
 }
+@media screen and (max-width: 550px) {
+  .pets-grid .pet-card5 {
+    display: none;
+  }
+}
 .pets-grid .pet-card6 {
   grid-area: f;
+}
+@media screen and (max-width: 550px) {
+  .pets-grid .pet-card6 {
+    display: none;
+  }
 }
 .pets-grid .pet-card7 {
   grid-area: g;
@@ -330,6 +405,11 @@ a {
 @media screen and (max-width: 900px) {
   .pets-pagination {
     padding-bottom: 75px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pets-pagination {
+    max-width: 300px;
   }
 }
 .pets-pagination .pets-btn {
@@ -393,6 +473,12 @@ a {
   font-size: 35px;
   line-height: 45.5px;
 }
+@media screen and (max-width: 550px) {
+  .footer-item .footer-title, .container__main-pets .pets-title {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+}
 
 .footer-item .footer-link, .pets-grid .pet-card .pet-subtitle, .pets-pagination .pets-btn {
   font-family: "Georgia", "Times New Roman", Times, serif;
@@ -437,6 +523,26 @@ a {
 @media screen and (max-width: 800px) {
   .mid-img {
     display: inline;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mid-img {
+    display: none;
+  }
+}
+
+.small-img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-img {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .regular-img {
+    display: none;
   }
 }
 
@@ -508,6 +614,12 @@ a {
 @media screen and (max-width: 900px) {
   .footer-item .footer-img {
     flex-grow: 2;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer-item .footer-img {
+    width: 260px;
+    height: 270px;
   }
 }
 .footer-item .footer-img img {

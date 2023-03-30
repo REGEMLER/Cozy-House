@@ -31,6 +31,10 @@ a {
     font-weight: 400;
     font-size: $title;
     line-height: 45.5px;
+    @media screen and (max-width: 550px) {
+        font-size: $title-small;
+        line-height: 32.5px;
+    }
 }
 
 %subtitle{
@@ -74,5 +78,21 @@ a {
     display: none;
     @media screen and (max-width: 800px){
         display: inline;
+    }
+    @media screen and (max-width: 600px){
+        display: none;
+    }
+}
+
+.small-img{
+    display: none;
+    @media screen and (max-width: 600px){
+        display: inline;
+    }
+}
+
+.regular-img{
+    @media screen and (max-width: 600px){
+        display: none;
     }
 }

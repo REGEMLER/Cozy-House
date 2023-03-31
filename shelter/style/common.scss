@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 ul,
 ol,
 li {
@@ -22,17 +26,15 @@ a {
     text-decoration: none;
 }
 
-%container{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
 %title{
     font-family: $main-font,'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: $title;
     line-height: 45.5px;
+    @media screen and (max-width: 550px) {
+        font-size: $title-small;
+        line-height: 32.5px;
+    }
 }
 
 %subtitle{
@@ -50,15 +52,47 @@ a {
 }
 
 %btn{
-    font-family: $secont-font, Helvetica, sans-serif;
+    font-family: $main-font,'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: $btn;
     line-height: 22.1px;
 }
 
 .wrapper{
-    max-width: 1280px;
-    min-width: 320px;
+    width: 100vw;
     margin: 0 auto;
-    overflow: hidden;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.big-img{
+    @media screen and (max-width: 800px){
+       display: none;
+    }
+}
+
+.mid-img{
+    display: none;
+    @media screen and (max-width: 800px){
+        display: inline;
+    }
+    @media screen and (max-width: 600px){
+        display: none;
+    }
+}
+
+.small-img{
+    display: none;
+    @media screen and (max-width: 600px){
+        display: inline;
+    }
+}
+
+.regular-img{
+    @media screen and (max-width: 600px){
+        display: none;
+    }
 }

@@ -1,23 +1,43 @@
 @import "variables";
 @import "common";
 
-.footer{
-    @extend %container;
+.bg__footer{
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); 
+}
+
+.container__footer{
+    padding: 40px 40px 0 40px;
     display: flex;
-    justify-content: space-between;
     padding-top: 40px;
+
+    @media screen and (max-width: 900px){
+        padding: 40px 30px 0 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 770px){
+        justify-content: space-evenly;
+        padding: 30px 30px 0 20px;
+    }
 }
 
 .footer-item{
-
     .footer-title{
         @extend %title; 
         color: $color-white;
         max-width: 275px;
         letter-spacing: 0.06em;
         margin-bottom: 30px;
-        margin-top: 20px;;
+        margin-top: 20px;
+
+        @media screen and (max-width: 770px){
+            margin-top: 0px;
+        }
+        @media screen and (max-width: 330px){
+            text-align: center;
+            margin-bottom: 40px;
+        }
     }
 
     .footer-link{
@@ -25,7 +45,7 @@
         display: block;
         color: $primary-color;
         margin-bottom: 35px;
-        max-width: 250px;
+        max-width: 260px;
         display: flex;
         align-items: center;
 
@@ -53,6 +73,15 @@
         width: 300px;
         height: 310px;
         object-fit: cover;
+
+        @media screen and (max-width: 900px){
+            flex-grow: 2;
+        }
+
+        @media screen and (max-width: 550px){
+            width: 260px;
+            height: 270px;
+        }
     
         img{
             width: 100%;
@@ -60,4 +89,40 @@
         }
     }
     
+}
+
+.footer-item1{
+    max-width: 280px;
+    margin-right: 160px;
+
+    @media screen and (max-width: 1150px){
+        margin-right: 50px;
+    }
+    @media screen and (max-width: 1000px){
+        margin-right: 20px;
+    }
+    @media screen and (max-width: 770px){
+        margin-right: 0px;
+    }
+    @media screen and (max-width: 330px){
+        max-width: 250px;
+    }
+}
+
+.footer-item2{
+    max-width: 300px;
+    margin-right: 180px;
+
+    @media screen and (max-width: 1150px){
+        margin-right: 100px;
+    }
+    @media screen and (max-width: 1000px){
+        margin-right: 40px;
+    }
+    @media screen and (max-width: 900px){
+        margin-right: 0;
+    }
+    @media screen and (max-width: 330px){
+        max-width: 310px;
+    }
 }

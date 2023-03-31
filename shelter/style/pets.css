@@ -24,14 +24,14 @@ a {
   text-decoration: none;
 }
 
-.footer-item .footer-title, .container__main-pets .pets-title {
+.footer-item .footer-title, .bg__main-pets .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .footer-item .footer-title, .container__main-pets .pets-title {
+  .footer-item .footer-title, .bg__main-pets .pets-title {
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -147,6 +147,11 @@ a {
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 767px) {
+  .header-nav {
+    padding: 30px 20px;
+  }
+}
 .header-nav .logo {
   margin-right: 570px;
   cursor: pointer;
@@ -254,11 +259,7 @@ a {
 .bg__main-pets {
   background-color: #F6F6F6;
 }
-
-.container__main-pets {
-  padding: 0 40px;
-}
-.container__main-pets .pets-title {
+.bg__main-pets .pets-title {
   max-width: 350px;
   margin: 0 auto;
   text-align: center;
@@ -266,10 +267,17 @@ a {
   letter-spacing: 0.06em;
   color: #545454;
 }
+@media screen and (max-width: 330px) {
+  .bg__main-pets .pets-title {
+    max-width: 230px;
+    padding-top: 45px;
+  }
+}
 
 .pets-grid {
   width: 100%;
   margin: 60px auto;
+  padding: 0 40px;
   display: grid;
   grid-row-gap: 30px;
   grid-column-gap: 25px;
@@ -290,6 +298,9 @@ a {
 }
 @media screen and (max-width: 550px) {
   .pets-grid {
+    margin: 40px auto;
+    padding: 0 25px;
+    grid-row-gap: 35px;
     grid-template-areas: "a" "b" "c";
   }
 }
@@ -339,6 +350,11 @@ a {
   background-color: #FFFFFF;
   cursor: pointer;
   transition: background-color linear 1s, transform linear 1s;
+}
+@media screen and (max-width: 369px) {
+  .pets-grid .pet-card .pet-card-btn {
+    margin: 28px auto;
+  }
 }
 .pets-grid .pet-card .pet-card-btn:active {
   transform: scale(0.95);
@@ -410,6 +426,7 @@ a {
 @media screen and (max-width: 400px) {
   .pets-pagination {
     max-width: 300px;
+    padding-bottom: 50px;
   }
 }
 .pets-pagination .pets-btn {
@@ -467,14 +484,14 @@ a {
   text-decoration: none;
 }
 
-.footer-item .footer-title, .container__main-pets .pets-title {
+.footer-item .footer-title, .bg__main-pets .pets-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .footer-item .footer-title, .container__main-pets .pets-title {
+  .footer-item .footer-title, .bg__main-pets .pets-title {
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -565,7 +582,7 @@ a {
 @media screen and (max-width: 770px) {
   .container__footer {
     justify-content: space-evenly;
-    padding: 35px 30px 0 20px;
+    padding: 30px 30px 0 20px;
   }
 }
 
@@ -579,6 +596,12 @@ a {
 @media screen and (max-width: 770px) {
   .footer-item .footer-title {
     margin-top: 0px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer-item .footer-title {
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
 .footer-item .footer-link {
@@ -646,6 +669,11 @@ a {
     margin-right: 0px;
   }
 }
+@media screen and (max-width: 330px) {
+  .footer-item1 {
+    max-width: 250px;
+  }
+}
 
 .footer-item2 {
   max-width: 300px;
@@ -664,5 +692,10 @@ a {
 @media screen and (max-width: 900px) {
   .footer-item2 {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer-item2 {
+    max-width: 310px;
   }
 }/*# sourceMappingURL=pets.css.map */

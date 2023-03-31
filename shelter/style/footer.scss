@@ -18,12 +18,11 @@
 
     @media screen and (max-width: 770px){
         justify-content: space-evenly;
-        padding: 35px 30px 0 20px;
+        padding: 30px 30px 0 20px;
     }
 }
 
 .footer-item{
-
     .footer-title{
         @extend %title; 
         color: $color-white;
@@ -34,6 +33,10 @@
 
         @media screen and (max-width: 770px){
             margin-top: 0px;
+        }
+        @media screen and (max-width: 330px){
+            text-align: center;
+            margin-bottom: 40px;
         }
     }
 
@@ -95,14 +98,14 @@
     @media screen and (max-width: 1150px){
         margin-right: 50px;
     }
-
-
     @media screen and (max-width: 1000px){
         margin-right: 20px;
     }
-
     @media screen and (max-width: 770px){
         margin-right: 0px;
+    }
+    @media screen and (max-width: 330px){
+        max-width: 250px;
     }
 }
 
@@ -113,12 +116,13 @@
     @media screen and (max-width: 1150px){
         margin-right: 100px;
     }
-
     @media screen and (max-width: 1000px){
         margin-right: 40px;
     }
-
     @media screen and (max-width: 900px){
         margin-right: 0;
+    }
+    @media screen and (max-width: 330px){
+        max-width: 310px;
     }
 }

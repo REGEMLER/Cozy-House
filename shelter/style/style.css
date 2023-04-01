@@ -57,6 +57,11 @@ a {
   font-size: 17px;
   line-height: 22.1px;
 }
+@media screen and (max-width: 300px) {
+  .friends-slider .friends-cards .friend-card .freind-card-btn, .container__friends .friends-btn, .not-only .not-only-content .not-only-btn {
+    padding: 15px 30px;
+  }
+}
 
 .wrapper {
   width: 100vw;
@@ -1161,6 +1166,11 @@ a {
   font-size: 17px;
   line-height: 22.1px;
 }
+@media screen and (max-width: 300px) {
+  .not-only .not-only-content .not-only-btn, .container__friends .friends-btn, .friends-slider .friends-cards .friend-card .freind-card-btn {
+    padding: 15px 30px;
+  }
+}
 
 .wrapper {
   width: 100vw;
@@ -1269,8 +1279,28 @@ a {
 .footer-item .footer-tel {
   letter-spacing: 0.06em;
 }
+@media screen and (max-width: 900px) {
+  .footer-item .footer-tel {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-tel {
+    margin-bottom: 35px;
+  }
+}
 .footer-item .footer-tel::before {
   content: url(../icons/icon-phone.svg);
+}
+@media screen and (max-width: 900px) {
+  .footer-item .footer-map {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-map {
+    margin-bottom: 35px;
+  }
 }
 .footer-item .footer-img {
   width: 300px;

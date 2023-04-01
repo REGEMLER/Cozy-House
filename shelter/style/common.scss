@@ -56,6 +56,9 @@ a {
     font-weight: 400;
     font-size: $btn;
     line-height: 22.1px;
+    @media screen and (max-width: 300px) {
+        padding: 15px 30px;
+    }
 }
 
 .wrapper{

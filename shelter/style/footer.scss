@@ -64,8 +64,24 @@
 
     .footer-tel{
         letter-spacing: 0.06em;
+        @media screen and (max-width: 900px){
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 400px){
+            margin-bottom: 35px;
+        }
         &::before{
             content: url(../icons/icon-phone.svg);
+        }
+    
+    }
+
+    .footer-map{
+        @media screen and (max-width: 900px){
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 400px){
+            margin-bottom: 35px;
         }
     }
 

@@ -151,8 +151,28 @@ a {
 .footer-item .footer-tel {
   letter-spacing: 0.06em;
 }
+@media screen and (max-width: 900px) {
+  .footer-item .footer-tel {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-tel {
+    margin-bottom: 35px;
+  }
+}
 .footer-item .footer-tel::before {
   content: url(../icons/icon-phone.svg);
+}
+@media screen and (max-width: 900px) {
+  .footer-item .footer-map {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-map {
+    margin-bottom: 35px;
+  }
 }
 .footer-item .footer-img {
   width: 300px;

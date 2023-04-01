@@ -57,6 +57,11 @@ a {
   font-size: 17px;
   line-height: 22.1px;
 }
+@media screen and (max-width: 300px) {
+  .pets-grid .pet-card .pet-card-btn {
+    padding: 15px 30px;
+  }
+}
 
 .wrapper {
   width: 100vw;
@@ -413,14 +418,14 @@ a {
 .pets-pagination {
   max-width: 350px;
   margin: 0 auto;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 900px) {
   .pets-pagination {
-    padding-bottom: 75px;
+    padding-bottom: 90px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -516,6 +521,11 @@ a {
   font-weight: 400;
   font-size: 17px;
   line-height: 22.1px;
+}
+@media screen and (max-width: 300px) {
+  .pets-grid .pet-card .pet-card-btn {
+    padding: 15px 30px;
+  }
 }
 
 .wrapper {
@@ -625,8 +635,28 @@ a {
 .footer-item .footer-tel {
   letter-spacing: 0.06em;
 }
+@media screen and (max-width: 900px) {
+  .footer-item .footer-tel {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-tel {
+    margin-bottom: 35px;
+  }
+}
 .footer-item .footer-tel::before {
   content: url(../icons/icon-phone.svg);
+}
+@media screen and (max-width: 900px) {
+  .footer-item .footer-map {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer-item .footer-map {
+    margin-bottom: 35px;
+  }
 }
 .footer-item .footer-img {
   width: 300px;

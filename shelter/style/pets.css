@@ -44,13 +44,6 @@ a {
   line-height: 23px;
 }
 
-.header-menu .header-menu-item {
-  font-family: "Arial", Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-}
-
 .pets-grid .pet-card .pet-card-btn {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
@@ -214,6 +207,10 @@ a {
     justify-content: space-between;
     height: 22px;
     width: 30px;
+    position: relative;
+    z-index: 50;
+    cursor: pointer;
+    transition: all linear 1s;
   }
 }
 .header-nav .hamburger .hamburger-item {
@@ -222,21 +219,44 @@ a {
   background-color: #F1CDB3;
 }
 
+.hamburger__active {
+  transform: rotateZ(90deg);
+}
+
 .header-menu {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 767px) {
   .header-menu {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
+    min-width: 320px;
+    height: 100vh;
+    padding-top: 45px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAFAFA;
+    z-index: 10;
+    transition: all linear 1s;
   }
 }
 .header-menu .header-menu-item {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
   margin-right: 35px;
   transition: border-bottom linear 0.4s;
+}
+@media screen and (max-width: 767px) {
+  .header-menu .header-menu-item {
+    font-size: 32px;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 }
 .header-menu .header-menu-item a {
   color: #545454;
@@ -259,6 +279,10 @@ a {
 }
 .header-menu .header-menu-item__passive:active a {
   color: #292929;
+}
+
+.header-menu__active {
+  right: -20px;
 }
 
 .bg__main-pets {
@@ -507,13 +531,6 @@ a {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
-}
-
-.header-menu .header-menu-item {
-  font-family: "Arial", Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
 }
 
 .pets-grid .pet-card .pet-card-btn {

@@ -110,7 +110,8 @@
         justify-content: space-around;
         align-items: center;
         background-color: $color-btn;
-        transition: all linear 1s;
+        z-index: 10;
+        transition: right linear 1s;
     }
 
     .header-menu-item{
@@ -161,7 +162,6 @@
 
 .header-menu__active{
     right: -20px;
-    z-index: 10;
  }
 
 .not-only{

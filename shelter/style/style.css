@@ -249,7 +249,8 @@ a {
     justify-content: space-around;
     align-items: center;
     background-color: #292929;
-    transition: all linear 1s;
+    z-index: 10;
+    transition: right linear 1s;
   }
 }
 .header-menu .header-menu-item {
@@ -292,7 +293,6 @@ a {
 
 .header-menu__active {
   right: -20px;
-  z-index: 10;
 }
 
 .not-only {
@@ -1404,4 +1404,8 @@ a {
   .footer-item2 {
     max-width: 310px;
   }
+}
+
+.overflow-x {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

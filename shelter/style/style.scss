@@ -1,6 +1,6 @@
 @import "variables";
 @import "common";
-@import "animation";
+@import "card";
 
 .bg__header{
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
@@ -952,3 +952,19 @@
 }
 
 @import "footer";
+
+.overflow-x{
+    overflow: hidden;
+}
+
+.temp{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-image: radial-gradient(100% 215.42% at 0% 0%, $color-text 0%, #5C5C5C 100%);
+    opacity: 0.9;
+  }

@@ -37,42 +37,42 @@
                 <div class="pet-card pet-card1">
                     <div class="pet-img"><img src="../IMG/pets-katrine.png" alt="Cat Katrine"></div>
                     <h3 class="pet-subtitle">Katrine</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="5" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card2">
                     <div class="pet-img"><img src="../IMG/pets-jennifer.png" alt="Dog Jennifer"></div>
                     <h3 class="pet-subtitle">Jennifer</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="1" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card3">
                     <div class="pet-img"><img src="../IMG/pets-woody.png" alt="Dog Woody"></div>
                     <h3 class="pet-subtitle">Woody</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="3" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card4">
                     <div class="pet-img"><img src="../IMG/pets-Sophia.png" alt="Dog Sophia"></div>
                     <h3 class="pet-subtitle">Sophia</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="2" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card5">
                     <div class="pet-img"><img src="../IMG/pets-timmy.png" alt="Cat Timmy"></div>
                     <h3 class="pet-subtitle">Timmy</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="6" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card6">
                     <div class="pet-img"><img src="../IMG/pets-charly.png" alt="Dog Charly"></div>
                     <h3 class="pet-subtitle">Charly</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="8" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card7">
                     <div class="pet-img"><img src="../IMG/pets-scarlet.png" alt="Dog Scarlett"></div>
                     <h3 class="pet-subtitle">Scarlett</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="4" class="pet-card-btn">Learn more</button>
                 </div>
                 <div class="pet-card pet-card8">
                     <div class="pet-img"><img src="../IMG/Freddie.png" alt="Cat Freddie"></div>
                     <h3 class="pet-subtitle">Freddie</h3>
-                    <button class="pet-card-btn">Learn more</button>
+                    <button id="7" class="pet-card-btn">Learn more</button>
                 </div>
             </div>
             <div class="pets-pagination">
@@ -103,8 +103,29 @@
         </div>
     </footer>
 
-    <script src="../JS/index.js"></script>
-    <script src="../JS/animals.js" type="module"></script>
+    <section class="popup">
+        <button class="popup-btn">&#10006;</button>
+        <div class="popup-content">
+            <div class="popup-img">
+                <img src="IMG/pets-jennifer.png" alt="animal">
+            </div>
+            <div class="popup-info">
+                <h2 class="popup-title">Jennifer</h2>
+                <h3 class="popup-subtitle">Dog-Labrador</h3>
+                <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                <ul class="popup-data">
+                    <li class="popup-item popup-item-age"><span>Age:</span>2 months</li>
+                    <li class="popup-item popup-item-ino"><span>Inoculations:</span>2 months</li>
+                    <li class="popup-item popup-item-deseases"><span>Diseases:</span>2 months</li>
+                    <li class="popup-item popup-item-parasites"><span>Parasites:</span>2 months</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../JS/index.js"></script>
+    <script type="module" src="../JS/pets.js"></script>
+    <script type="module" src="../JS/animals.js"></script>
     
 </body>
 </html>

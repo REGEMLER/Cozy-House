@@ -10,7 +10,6 @@
 </head>
 <body>
     
-    </div>
     <header class="wrapper bg__header">
         <div class="container container__header">
             <nav class="header-nav overflow-x">
@@ -67,17 +66,17 @@
                     <div class="friend-card">
                         <div class="friend-img"><img src="IMG/pets-katrine.png" alt="Cat Katrine"></div>
                         <h3 class="friend-subtitle">Katrine</h3>
-                        <button class="freind-card-btn">Learn more</button>
+                        <button id="5" class="freind-card-btn">Learn more</button>
                     </div>
                     <div class="friend-card">
                         <div class="friend-img"><img src="IMG/pets-jennifer.png" alt="dog Jennifer"></div>
                         <h3 class="friend-subtitle">Jennifer</h3>
-                        <button class="freind-card-btn">Learn more</button>
+                        <button id="1" class="freind-card-btn">Learn more</button>
                     </div>
                     <div class="friend-card">
                         <div class="friend-img"><img src="IMG/pets-woody.png" alt="dog Woody"></div>
                         <h3 class="friend-subtitle">Woody</h3>
-                        <button class="freind-card-btn">Learn more</button>
+                        <button id="3" class="freind-card-btn">Learn more</button>
                     </div>
                     <div class="friend-arrow friends-right"><img src="icons/Arrow-right.svg" alt="arrow right"></div>
                 </div>
@@ -164,7 +163,26 @@
         </div>
     </footer>
 
-    <script src="JS/index.js"></script>
-    <script src="JS/animals.js" type="module"></script>
+    <section class="popup">
+        <button class="popup-btn">&#10006;</button>
+        <div class="popup-content">
+            <div class="popup-img">
+                <img src="IMG/pets-jennifer.png" alt="animal">
+            </div>
+            <div class="popup-info">
+                <h2 class="popup-title">Jennifer</h2>
+                <h3 class="popup-subtitle">Dog-Labrador</h3>
+                <p class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                <ul class="popup-data">
+                    <li class="popup-item popup-item-age"><span>Age:</span>2 months</li>
+                    <li class="popup-item popup-item-ino"><span>Inoculations:</span>2 months</li>
+                    <li class="popup-item popup-item-deseases"><span>Diseases:</span>2 months</li>
+                    <li class="popup-item popup-item-parasites"><span>Parasites:</span>2 months</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="JS/index.js"></script>
+    <script type="module" src="JS/animals.js"></script>
 </body>
 </html>

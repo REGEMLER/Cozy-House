@@ -1,0 +1,31 @@
+@import "variables";
+@import "common";
+
+.overflow{
+    overflow: hidden;
+}
+
+.temp{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: #5C5C5C;
+    opacity: 0.9;
+}
+
+.header-menu__active{
+    right: -20px;
+    transition: right linear 1s;
+}
+
+.header-menu__transition-slow{
+    transition: right linear 1s;
+}
+
+.header-menu__transition-fast{
+    transition: right linear .3s;
+}

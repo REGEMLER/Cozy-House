@@ -2,6 +2,9 @@
 @import "common";
 @import "card";
 
+
+
+//////////////////////////////////////////////////////HEADER
 .bg__header{
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -80,7 +83,7 @@
            position: relative;
            z-index: 50;
            cursor: pointer;
-           transition: all linear 1s;
+           transition: transform linear 1s;
         }
 
         .hamburger-item{
@@ -111,7 +114,6 @@
         align-items: center;
         background-color: $color-btn;
         z-index: 10;
-        transition: right linear 1s;
     }
 
     .header-menu-item{
@@ -160,10 +162,9 @@
     }
 }
 
-.header-menu__active{
-    right: -20px;
- }
 
+
+//////////////////////////////////////////////////////NOT ONLY
 .not-only{
     display: flex;
     margin-top: 50px;
@@ -287,6 +288,9 @@
     }
 }
 
+
+
+//////////////////////////////////////////////////////ABOUT
 .bg__about{
     background-color: $color-white;
 }
@@ -370,6 +374,9 @@
     }
 }
 
+
+
+//////////////////////////////////////////////////////FRIENDS
 .bg__friends{
     background-color: $color-gray;
 }
@@ -425,6 +432,9 @@
     }
 }
 
+
+
+//////////////////////////////////////////////////////SLIDER
 .friends-slider{
     width: 100%;
     margin: 60px auto;
@@ -567,6 +577,10 @@
     }
 }
 
+
+
+
+//////////////////////////////////////////////////////HELP
 .bg__help{
     background-color: $color-white;
 }
@@ -597,6 +611,9 @@
     }
 }
 
+
+
+//////////////////////////////////////////////////////GRID
 .help-grid{
     width: 100%;
     margin: 0 auto;
@@ -798,6 +815,9 @@
     }
 }
 
+
+
+//////////////////////////////////////////////////////DONATION
 .bg__donation{
     background-color: $color-gray;
 }
@@ -952,19 +972,5 @@
 }
 
 @import "footer";
+@import "handlers";
 
-.overflow-x{
-    overflow: hidden;
-}
-
-.temp{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;  
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 2;
-    background-image: radial-gradient(100% 215.42% at 0% 0%, $color-text 0%, #5C5C5C 100%);
-    opacity: 0.9;
-  }

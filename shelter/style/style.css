@@ -228,7 +228,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -10;
-  transition: all linear 1s;
+  transition: all linear 0.7s;
 }
 @media screen and (max-width: 1050px) {
   .popup {
@@ -271,7 +271,6 @@ a {
   opacity: 1;
   visibility: visible;
   z-index: 100;
-  transition: all linear 1s;
 }
 
 .popup-content {
@@ -486,7 +485,7 @@ a {
     position: relative;
     z-index: 50;
     cursor: pointer;
-    transition: all linear 1s;
+    transition: transform linear 1s;
   }
 }
 .header-nav .hamburger .hamburger-item {
@@ -516,7 +515,6 @@ a {
     align-items: center;
     background-color: #292929;
     z-index: 10;
-    transition: right linear 1s;
   }
 }
 .header-menu .header-menu-item {
@@ -555,10 +553,6 @@ a {
 }
 .header-menu .header-menu-item__passive:active a {
   color: #FAFAFA;
-}
-
-.header-menu__active {
-  right: -20px;
 }
 
 .not-only {
@@ -1672,7 +1666,117 @@ a {
   }
 }
 
-.overflow-x {
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.popup-content .popup-info .popup-title, .container__about .about-content .about-title, .container__friends .friends-title, .container__help .help-title, .donation-content .donation-title, .footer-item .footer-title {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45.5px;
+}
+@media screen and (max-width: 550px) {
+  .popup-content .popup-info .popup-title, .container__about .about-content .about-title, .container__friends .friends-title, .container__help .help-title, .donation-content .donation-title, .footer-item .footer-title {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+}
+
+.popup .popup-btn, .popup-content .popup-info .popup-subtitle, .friends-slider .friends-cards .friend-card .friend-subtitle, .footer-item .footer-link {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.not-only .not-only-content .not-only-text, .container__about .about-content .about-text {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.not-only .not-only-content .not-only-btn, .container__friends .friends-btn, .friends-slider .friends-cards .friend-card .freind-card-btn {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22.1px;
+}
+@media screen and (max-width: 300px) {
+  .not-only .not-only-content .not-only-btn, .container__friends .friends-btn, .friends-slider .friends-cards .friend-card .freind-card-btn {
+    padding: 15px 30px;
+  }
+}
+
+.wrapper {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .big-img {
+    display: none;
+  }
+}
+
+.mid-img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .mid-img {
+    display: inline;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mid-img {
+    display: none;
+  }
+}
+
+.small-img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-img {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .regular-img {
+    display: none;
+  }
+}
+
+.overflow {
   overflow: hidden;
 }
 
@@ -1684,6 +1788,19 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  background-image: radial-gradient(100% 215.42% at 0% 0%, #4C4C4C 0%, #5C5C5C 100%);
+  background-color: #5C5C5C;
   opacity: 0.9;
+}
+
+.header-menu__active {
+  right: -20px;
+  transition: right linear 1s;
+}
+
+.header-menu__transition-slow {
+  transition: right linear 1s;
+}
+
+.header-menu__transition-fast {
+  transition: right linear 0.3s;
 }/*# sourceMappingURL=style.css.map */

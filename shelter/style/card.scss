@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: -10;
-  transition: all linear 1s;
+  transition: all linear 0.7s;
   @media screen and (max-width: 1050px){
     width: 80%;
   }
@@ -52,7 +52,6 @@
   opacity: 1;
   visibility: visible;
   z-index: 100;
-  transition: all linear 1s;
 }
 
 .popup-content{

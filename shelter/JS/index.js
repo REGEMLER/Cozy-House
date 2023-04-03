@@ -1,28 +1,20 @@
  ///////////////////////////////////////////BURGER MENU
  
+ import { blurBG, overflowNav, createPopup } from './effects.js';
  const hamburger = document.getElementById("Hamburger"); 
  const menu = document.querySelector(".header-menu");
  let isMenuOpen = false;
- let isPopupOpen = false;
 
+ function showMenu(){
+   blurBG(isMenuOpen);
+   const nav = document.querySelector(".header-nav");
+   menu.classList.add("header-menu__active");
+   hamburger.classList.add("hamburger__active"); 
+   document.body.style.overflowY = "hidden";
+   nav.classList.remove("overflow");
+   isMenuOpen = true;
+}
 
- function blurBG(isBlured) {
-
-    if(!isBlured){
-        const temp  = document.createElement("DIV");
-        temp.classList.add("temp");
-        document.body.append(temp); 
-    } else{
-        const temp  = document.querySelector(".temp");
-        temp.remove(); 
-    }
- }
-
-
- function makeOverflowHidden() {
-    const nav = document.querySelector(".header-nav");
-    nav.classList.add("overflow-x");
- }
 
  function hideMenu(){
     blurBG(isMenuOpen); 
@@ -32,73 +24,63 @@
     isMenuOpen = false;
  }
 
- function showMenu(){
-    blurBG(isMenuOpen);
-    const nav = document.querySelector(".header-nav");
-    menu.classList.add("header-menu__active");
-    hamburger.classList.add("hamburger__active"); 
-    document.body.style.overflowY = "hidden";
-    nav.classList.remove("overflow-x");
-    isMenuOpen = true;
- }
-
- function hideMenuWithBody(event){
-    if(!isMenuOpen || event.target.closest(".header-menu") || event.target.closest("#Hamburger")){
-        return; 
-    }   
-    hideMenu(); 
-    setTimeout(makeOverflowHidden,1100);
- }
-
- function hideMenuWithLink(event){
-    if(event.target.closest(".header-menu-item") && isMenuOpen){
-        hideMenu(); 
-        makeOverflowHidden();
-    }   
- }
-
- function moveMenuWithBurger(){
+ function moveMenuWithBurger(event){
+   event.stopPropagation();
     if(menu.classList.contains("header-menu__active")){
+        menu.classList.add("header-menu__transition-slow");
         hideMenu(); 
-        setTimeout(makeOverflowHidden,1100);
+        setTimeout(overflowNav,1100);
+        setTimeout(() => {
+         menu.classList.remove("header-menu__transition-slow");
+       },1100)
     } else {
         showMenu();
     }
  }
 
+ function hideMenuWithBody(event){
+    if(!isMenuOpen || event.target.closest(".header-menu")){
+        return; 
+    }   
+    menu.classList.add("header-menu__transition-slow");
+    hideMenu(); 
+    setTimeout(overflowNav,1100);
+    setTimeout(() => {
+      menu.classList.remove("header-menu__transition-slow");
+    },1100)
+ }
+
+ function hideMenuWithLink(event){
+    if(event.target.closest(".header-menu-item") && isMenuOpen){
+        menu.classList.add("header-menu__transition-fast");
+        hideMenu(); 
+        overflowNav();
+        setTimeout(() => {
+         menu.classList.remove("header-menu__transition-fast");
+       },500)
+    }   
+ }
+
+
 hamburger.addEventListener("click", moveMenuWithBurger); 
 document.body.addEventListener("click", hideMenuWithBody);
 menu.addEventListener("click", hideMenuWithLink);
 
- ///////////////////////////////////////////POPUP 
 
+
+ ///////////////////////////////////////////POPUP 
  import animals from './animals.js';
  const cardsMain = document.querySelector(".friends-cards"); 
+ let isPopupOpen = false;
+
 
  function showPopup(event) {
-    if(event.target.tagName !== "BUTTON"){
+    if(!event.target.closest(".friend-card")){
         return; 
     }
     event.stopPropagation();
-    const popup = document.querySelector(".popup"); 
-    const animal = animals.find(item => item.id == event.target.id);
-    const popupIMG = document.querySelector(".popup-img img");
-    popupIMG.src = animal.img; 
-    const popupTitle = document.querySelector(".popup-title");
-    popupTitle.textContent = animal.name;
-    const popupSubtitle = document.querySelector(".popup-subtitle");
-    popupSubtitle.textContent = animal.type + " " + animal.breed;
-    const popupText = document.querySelector(".popup-text");
-    popupText.textContent = animal.description;
-    const popupAge = document.querySelector(".popup-item-age");
-    popupAge.textContent = animal.age;
-    const popupInoculations = document.querySelector(".popup-item-ino");
-    popupInoculations.textContent = animal.inoculations.join(", ");
-    const popupDiseases = document.querySelector(".popup-item-deseases");
-    popupDiseases.textContent = animal.diseases.join(", ");
-    const popupParasites = document.querySelector(".popup-item-parasites");
-    popupParasites.textContent = animal.parasites.join(", ");
-    popup.classList.add("popup__active"); 
+    const card = event.target.closest(".friend-card")
+    createPopup(animals, card, false); 
     document.body.style.overflowY = "hidden";
     blurBG(isPopupOpen);
     isPopupOpen = true;  
@@ -107,8 +89,8 @@ menu.addEventListener("click", hideMenuWithLink);
  function hidePopup(){
     const popup = document.querySelector(".popup"); 
     popup.classList.remove("popup__active"); 
-    document.body.style.overflowY = "";
     blurBG(isPopupOpen);
+    document.body.style.overflowY = "";
     isPopupOpen = false; 
  }
 

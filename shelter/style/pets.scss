@@ -1,3 +1,4 @@
+@import "fonts";
 @import "variables";
 @import "common";
 @import "card";
@@ -46,7 +47,7 @@
 
         .logo-title{
             display: block;
-            font-family: $main-font 'Times New Roman', Times, serif;
+            font-family: $main-font, 'Times New Roman', Times, serif;
             font-weight: 400;
             font-size: $logo;
             line-height: 35.2px;
@@ -381,9 +382,6 @@
         align-items: center;
     }
 }
-
-
-@import "footer";
 
 @import "footer";
 @import "handlers";

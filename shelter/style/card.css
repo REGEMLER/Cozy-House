@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial/ARIAL.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial/ARIAL.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial/ARIAL.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial/ARIAL.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;

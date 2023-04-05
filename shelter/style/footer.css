@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -114,7 +146,7 @@ a {
 
 .footer-item .footer-title {
   color: #FFFFFF;
-  max-width: 275px;
+  max-width: 310px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -198,7 +230,7 @@ a {
 
 .footer-item1 {
   max-width: 280px;
-  margin-right: 160px;
+  margin-right: 130px;
 }
 @media screen and (max-width: 1150px) {
   .footer-item1 {

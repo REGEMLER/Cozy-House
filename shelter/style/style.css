@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -108,6 +140,38 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -456,7 +520,7 @@ a {
 }
 .header-nav .logo .logo-title {
   display: block;
-  font-family: "Georgia" "Times New Roman", Times, serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 35.2px;
@@ -590,8 +654,8 @@ a {
   color: #FFFFFF;
   padding-bottom: 40px;
   padding-top: 170px;
-  max-width: 310px;
-  letter-spacing: 0.04em;
+  max-width: 350px;
+  letter-spacing: 0.06em;
 }
 @media screen and (max-width: 800px) {
   .not-only .not-only-content .not-only-title {
@@ -1294,7 +1358,7 @@ a {
   }
 }
 .donation-content .donation-title {
-  max-width: 270px;
+  max-width: 310px;
   letter-spacing: 0.06em;
   color: #545454;
   margin-bottom: 20px;
@@ -1328,7 +1392,7 @@ a {
   }
 }
 .donation-content .donation-card {
-  width: 349px;
+  width: 360px;
   height: 43px;
   padding: 10px 15px;
   border-radius: 9px;
@@ -1375,7 +1439,7 @@ a {
   font-size: 20px;
   line-height: 23px;
   display: block;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 @media screen and (max-width: 550px) {
@@ -1399,6 +1463,38 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -1534,7 +1630,7 @@ a {
 
 .footer-item .footer-title {
   color: #FFFFFF;
-  max-width: 275px;
+  max-width: 310px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -1618,7 +1714,7 @@ a {
 
 .footer-item1 {
   max-width: 280px;
-  margin-right: 160px;
+  margin-right: 130px;
 }
 @media screen and (max-width: 1150px) {
   .footer-item1 {
@@ -1666,6 +1762,38 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;

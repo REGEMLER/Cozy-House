@@ -56,14 +56,14 @@ a {
   text-decoration: none;
 }
 
-.footer-item .footer-title, .bg__main-pets .pets-title, .popup-content .popup-info .popup-title {
+.footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .footer-item .footer-title, .bg__main-pets .pets-title, .popup-content .popup-info .popup-title {
+  .footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -191,14 +191,14 @@ a {
   text-decoration: none;
 }
 
-.footer-item .footer-title, .bg__main-pets .pets-title, .popup-content .popup-info .popup-title {
+.footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .footer-item .footer-title, .bg__main-pets .pets-title, .popup-content .popup-info .popup-title {
+  .footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -606,7 +606,7 @@ a {
 .bg__main-pets {
   background-color: #F6F6F6;
 }
-.bg__main-pets .pets-title {
+.bg__main-pets .pets-title1 {
   max-width: 350px;
   margin: 0 auto;
   text-align: center;
@@ -615,9 +615,21 @@ a {
   color: #545454;
 }
 @media screen and (max-width: 330px) {
-  .bg__main-pets .pets-title {
+  .bg__main-pets .pets-title1 {
     max-width: 230px;
     padding-top: 45px;
+  }
+}
+.bg__main-pets .pets-title2 {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+@media screen and (max-width: 330px) {
+  .bg__main-pets .pets-title2 {
+    max-width: 300px;
   }
 }
 
@@ -863,14 +875,14 @@ a {
   text-decoration: none;
 }
 
-.footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title {
+.footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title {
+  .footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -947,7 +959,6 @@ a {
 .container__footer {
   padding: 40px 40px 0 40px;
   display: flex;
-  padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
   .container__footer {
@@ -965,7 +976,7 @@ a {
 
 .footer-item .footer-title {
   color: #FFFFFF;
-  max-width: 310px;
+  max-width: 290px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -985,7 +996,7 @@ a {
   display: block;
   color: #F1CDB3;
   margin-bottom: 35px;
-  max-width: 260px;
+  max-width: 270px;
   display: flex;
   align-items: center;
 }
@@ -1155,14 +1166,14 @@ a {
   text-decoration: none;
 }
 
-.popup-content .popup-info .popup-title, .bg__main-pets .pets-title, .footer-item .footer-title {
+.popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2, .footer-item .footer-title {
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
-  .popup-content .popup-info .popup-title, .bg__main-pets .pets-title, .footer-item .footer-title {
+  .popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2, .footer-item .footer-title {
     font-size: 25px;
     line-height: 32.5px;
   }

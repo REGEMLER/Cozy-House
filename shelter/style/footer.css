@@ -128,7 +128,6 @@ a {
 .container__footer {
   padding: 40px 40px 0 40px;
   display: flex;
-  padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
   .container__footer {
@@ -146,7 +145,7 @@ a {
 
 .footer-item .footer-title {
   color: #FFFFFF;
-  max-width: 310px;
+  max-width: 290px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -166,7 +165,7 @@ a {
   display: block;
   color: #F1CDB3;
   margin-bottom: 35px;
-  max-width: 260px;
+  max-width: 270px;
   display: flex;
   align-items: center;
 }
@@ -230,7 +229,7 @@ a {
 
 .footer-item1 {
   max-width: 280px;
-  margin-right: 130px;
+  margin-right: 160px;
 }
 @media screen and (max-width: 1150px) {
   .footer-item1 {

@@ -102,3 +102,100 @@ menu.addEventListener("click", hideMenuWithLink);
 
  cardsMain.addEventListener("click", showPopup);
  document.body.addEventListener("click", hidePopupWithBody);
+
+  ///////////////////////////////////////////PAGINATION 
+
+const buttonFirstPage = document.getElementById("buttonFirstPage");
+const buttonBack = document.getElementById("buttonBack");
+const pageNumber = document.getElementById("pageNumber");
+const buttonNext = document.getElementById("buttonNext");
+const buttonLastPage = document.getElementById("buttonLastPage");
+
+let allCards = [
+   ...animals, 
+   ...animals.sort(()=> Math.random()-0.5),
+   ...animals.sort(()=> Math.random()-0.5),
+   ...animals.sort(()=> Math.random()-0.5),
+   ...animals.sort(()=> Math.random()-0.5),
+   ...animals.sort(()=> Math.random()-0.5),
+]; 
+
+let innerWIdth = window.innerWidth; 
+let cardsInPage = innerWIdth > 900 ? 8 : innerWIdth > 550 ? 6 : 3; 
+let amountOfPages = allCards.length / cardsInPage; 
+let currentPage = 1; 
+
+function changeInnerWIdth(){
+   innerWIdth = window.innerWidth; 
+   cardsInPage = innerWIdth > 900 ? 8 : innerWIdth > 550 ? 6 : 3; 
+   amountOfPages = allCards.length / cardsInPage; 
+   console.log(amountOfPages);
+}
+
+function nextPage(){
+   buttonFirstPage.classList.remove("pets-btn__desabled");
+   buttonFirstPage.classList.add("pets-btn__enabled");
+   buttonBack.classList.remove("pets-btn__desabled");
+   buttonBack.classList.add("pets-btn__enabled");
+   if(currentPage >= amountOfPages){
+      return; 
+   }
+   if(currentPage == amountOfPages - 1){
+      buttonLastPage.classList.add("pets-btn__desabled");
+      buttonLastPage.classList.remove("pets-btn__enabled");
+      buttonNext.classList.add("pets-btn__desabled");
+      buttonNext.classList.remove("pets-btn__enabled");
+   }
+   currentPage++; 
+   pageNumber.textContent = currentPage; 
+}
+
+function backPage(){
+   buttonLastPage.classList.remove("pets-btn__desabled");
+   buttonLastPage.classList.add("pets-btn__enabled");
+   buttonNext.classList.remove("pets-btn__desabled");
+   buttonNext.classList.add("pets-btn__enabled");
+   if(currentPage == 1){
+      return; 
+   }
+   if(currentPage == 2){
+      buttonFirstPage.classList.add("pets-btn__desabled");
+      buttonFirstPage.classList.remove("pets-btn__enabled");
+      buttonBack.classList.add("pets-btn__desabled");
+      buttonBack.classList.remove("pets-btn__enabled");
+   }
+   currentPage--; 
+   pageNumber.textContent = currentPage; 
+}
+
+function firstPage(){
+   buttonFirstPage.classList.add("pets-btn__desabled");
+   buttonFirstPage.classList.remove("pets-btn__enabled");
+   buttonBack.classList.add("pets-btn__desabled");
+   buttonBack.classList.remove("pets-btn__enabled");
+   buttonLastPage.classList.remove("pets-btn__desabled");
+   buttonLastPage.classList.add("pets-btn__enabled");
+   buttonNext.classList.remove("pets-btn__desabled");
+   buttonNext.classList.add("pets-btn__enabled");
+   currentPage = 1; 
+   pageNumber.textContent = currentPage; 
+}
+
+function lastPage(){
+   buttonFirstPage.classList.remove("pets-btn__desabled");
+   buttonFirstPage.classList.add("pets-btn__enabled");
+   buttonBack.classList.remove("pets-btn__desabled");
+   buttonBack.classList.add("pets-btn__enabled");
+   buttonLastPage.classList.add("pets-btn__desabled");
+   buttonLastPage.classList.remove("pets-btn__enabled");
+   buttonNext.classList.add("pets-btn__desabled");
+   buttonNext.classList.remove("pets-btn__enabled");
+   currentPage = amountOfPages; 
+   pageNumber.textContent = currentPage; 
+}
+
+window.addEventListener("resize",changeInnerWIdth);
+buttonFirstPage.addEventListener("click", firstPage);
+buttonBack.addEventListener("click", backPage);
+buttonNext.addEventListener("click", nextPage);
+buttonLastPage.addEventListener("click", lastPage);

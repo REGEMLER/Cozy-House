@@ -3,8 +3,6 @@
 @import "common";
 @import "card";
 
-
-
 //////////////////////////////////////////////////////HEADER
 .bg__header{
     background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
@@ -198,7 +196,7 @@
             padding-bottom: 40px;
             padding-top: 170px;
             max-width: 350px;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.02em;
 
             @media screen and (max-width: 800px){
                 padding-top: 35px;
@@ -290,7 +288,6 @@
 }
 
 
-
 //////////////////////////////////////////////////////ABOUT
 .bg__about{
     background-color: $color-white;
@@ -349,7 +346,7 @@
 
         .about-title{
             @extend %title; 
-            letter-spacing: 0.1em;
+            letter-spacing: 0.06em;
             max-width: 370px;
             margin-bottom: 25px;
             padding-top: 10px;
@@ -405,6 +402,10 @@
         text-align: center;
         color: $color-title;
         letter-spacing: 0.05em;
+
+        @media screen and (max-width: 330px){
+            letter-spacing: 0.02em;
+        }
     }
 
     .friends-btn{
@@ -865,11 +866,12 @@
     }
     @media screen and (max-width: 330px){
         margin-bottom: 40px;
+        padding: 0 15px 0 15px;
     }
     
      .donation-title{
         @extend %title; 
-        max-width: 310px;
+        max-width: 300px;
         letter-spacing: 0.06em;
         color: $color-title;
         margin-bottom: 20px;
@@ -880,7 +882,7 @@
             margin-bottom: 25px;
         }
         @media screen and (max-width: 330px){
-            max-width: 200px;
+            max-width: 210px;
         }
     }
     
@@ -897,11 +899,12 @@
             width: 100%;
             margin: 20px auto;
             text-align: center;
+            letter-spacing: 0.02em;
         }
     }
     
     .donation-card{
-        width: 360px;
+        width: 350px;
         height: 43px;
         padding: 10px 15px;
         border-radius: 9px;
@@ -947,7 +950,7 @@
             font-size: $subtitle;
             line-height: 23px;
             display: block;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.01em;
             color: $color-title;
 
             @media screen and (max-width: 550px){

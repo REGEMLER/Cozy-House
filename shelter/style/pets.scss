@@ -1,3 +1,4 @@
+@import "fonts";
 @import "variables";
 @import "common";
 @import "animation";
@@ -45,7 +46,7 @@
 
         .logo-title{
             display: block;
-            font-family: $main-font 'Times New Roman', Times, serif;
+            font-family: $main-font, 'Times New Roman', Times, serif;
             font-weight: 400;
             font-size: $logo;
             line-height: 35.2px;
@@ -136,7 +137,7 @@
 .bg__main-pets{
     background-color: $color-gray; 
 
-    .pets-title{
+    .pets-title1{
         @extend %title;
         max-width: 350px;
         margin: 0 auto;
@@ -148,6 +149,19 @@
         @media screen and (max-width: 330px){
             max-width: 230px;
             padding-top: 45px;
+        }
+    }
+
+    .pets-title2{
+        @extend %title;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: $color-title; 
+
+        @media screen and (max-width: 330px){
+            max-width: 300px;
         }
     }
 }

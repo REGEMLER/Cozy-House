@@ -1,3 +1,4 @@
+@import "fonts";
 @import "variables";
 @import "common";
 @import "animation";
@@ -48,7 +49,7 @@
 
         .logo-title{
             display: block;
-            font-family: $main-font 'Times New Roman', Times, serif;
+            font-family: $main-font, 'Times New Roman', Times, serif;
             font-weight: 400;
             font-size: $logo;
             line-height: 35.2px;
@@ -165,8 +166,8 @@
             color: $color-white;
             padding-bottom: 40px;
             padding-top: 170px;
-            max-width: 310px;
-            letter-spacing: 0.04em;
+            max-width: 350px;
+            letter-spacing: 0.02em;
 
             @media screen and (max-width: 800px){
                 padding-top: 35px;
@@ -314,7 +315,7 @@
 
         .about-title{
             @extend %title; 
-            letter-spacing: 0.1em;
+            letter-spacing: 0.06em;
             max-width: 370px;
             margin-bottom: 25px;
             padding-top: 10px;
@@ -367,6 +368,10 @@
         text-align: center;
         color: $color-title;
         letter-spacing: 0.05em;
+
+        @media screen and (max-width: 330px){
+            letter-spacing: 0.02em;
+        }
     }
 
     .friends-btn{
@@ -553,7 +558,7 @@
     
     .help-title{
         @extend %title; 
-        max-width: 300px;
+        max-width: 310px;
         margin: 0 auto;
         text-align: center;
         color: $color-title; 
@@ -814,11 +819,12 @@
     }
     @media screen and (max-width: 330px){
         margin-bottom: 40px;
+        padding: 0 15px 0 15px;
     }
     
      .donation-title{
         @extend %title; 
-        max-width: 270px;
+        max-width: 300px;
         letter-spacing: 0.06em;
         color: $color-title;
         margin-bottom: 20px;
@@ -829,7 +835,7 @@
             margin-bottom: 25px;
         }
         @media screen and (max-width: 330px){
-            max-width: 200px;
+            max-width: 210px;
         }
     }
     
@@ -846,6 +852,7 @@
             width: 100%;
             margin: 20px auto;
             text-align: center;
+            letter-spacing: 0.02em;
         }
     }
     
@@ -896,7 +903,7 @@
             font-size: $subtitle;
             line-height: 23px;
             display: block;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.01em;
             color: $color-title;
 
             @media screen and (max-width: 550px){

@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -190,7 +214,7 @@ a {
 }
 .header-nav .logo .logo-title {
   display: block;
-  font-family: "Georgia" "Times New Roman", Times, serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 35.2px;
@@ -298,8 +322,8 @@ a {
   color: #FFFFFF;
   padding-bottom: 40px;
   padding-top: 170px;
-  max-width: 310px;
-  letter-spacing: 0.04em;
+  max-width: 350px;
+  letter-spacing: 0.02em;
 }
 @media screen and (max-width: 800px) {
   .not-only .not-only-content .not-only-title {
@@ -468,7 +492,7 @@ a {
   }
 }
 .container__about .about-content .about-title {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   max-width: 370px;
   margin-bottom: 25px;
   padding-top: 10px;
@@ -523,6 +547,11 @@ a {
   text-align: center;
   color: #545454;
   letter-spacing: 0.05em;
+}
+@media screen and (max-width: 330px) {
+  .container__friends .friends-title {
+    letter-spacing: 0.02em;
+  }
 }
 .container__friends .friends-btn {
   color: #292929;
@@ -703,7 +732,7 @@ a {
   }
 }
 .container__help .help-title {
-  max-width: 300px;
+  max-width: 310px;
   margin: 0 auto;
   text-align: center;
   color: #545454;
@@ -999,10 +1028,11 @@ a {
 @media screen and (max-width: 330px) {
   .donation-content {
     margin-bottom: 40px;
+    padding: 0 15px 0 15px;
   }
 }
 .donation-content .donation-title {
-  max-width: 270px;
+  max-width: 300px;
   letter-spacing: 0.06em;
   color: #545454;
   margin-bottom: 20px;
@@ -1016,7 +1046,7 @@ a {
 }
 @media screen and (max-width: 330px) {
   .donation-content .donation-title {
-    max-width: 200px;
+    max-width: 210px;
   }
 }
 .donation-content .donation-subtitle {
@@ -1033,6 +1063,7 @@ a {
     width: 100%;
     margin: 20px auto;
     text-align: center;
+    letter-spacing: 0.02em;
   }
 }
 .donation-content .donation-card {
@@ -1083,7 +1114,7 @@ a {
   font-size: 20px;
   line-height: 23px;
   display: block;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   color: #545454;
 }
 @media screen and (max-width: 550px) {
@@ -1107,6 +1138,30 @@ a {
   }
 }
 
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -1224,7 +1279,6 @@ a {
 .container__footer {
   padding: 40px 40px 0 40px;
   display: flex;
-  padding-top: 40px;
 }
 @media screen and (max-width: 900px) {
   .container__footer {
@@ -1242,7 +1296,7 @@ a {
 
 .footer-item .footer-title {
   color: #FFFFFF;
-  max-width: 275px;
+  max-width: 290px;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -1262,7 +1316,7 @@ a {
   display: block;
   color: #F1CDB3;
   margin-bottom: 35px;
-  max-width: 260px;
+  max-width: 270px;
   display: flex;
   align-items: center;
 }

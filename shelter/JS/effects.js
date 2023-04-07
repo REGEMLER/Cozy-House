@@ -41,3 +41,25 @@ export function blurBG(isBlured) {
     }
     popup.classList.add("popup__active"); 
  }
+
+ export function createPetsArr(arr){
+   let result = [...arr]; 
+   for(let i = 0; i < 5; i++){
+      let arrSorted = [...arr].sort(()=> Math.random() - 0.5);
+
+      for(let j = result.length - 1; arrSorted.length > 0;){
+
+         if(arrSorted[arrSorted.length - 1].id != result[j].id &&
+          arrSorted[arrSorted.length - 1].id != result[j - 1].id &&
+          arrSorted[arrSorted.length - 1].id != result[j - 2].id &&
+          arrSorted[arrSorted.length - 1].id != result[j - 3].id){
+            result.push(arrSorted[arrSorted.length - 1]);
+            arrSorted.pop(); 
+            j++; 
+          } else {
+            arrSorted = [...arrSorted].sort(()=> Math.random() - 0.5);
+          }
+      }
+   }
+   return result; 
+ }

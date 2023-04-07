@@ -1,6 +1,6 @@
  ///////////////////////////////////////////BURGER MENU
  
- import { blurBG, overflowNav, createPopup } from './effects.js';
+ import { blurBG, overflowNav, createPopup, createPetsArr } from './effects.js';
  const hamburger = document.getElementById("Hamburger"); 
  const menu = document.querySelector(".header-menu");
  let isMenuOpen = false;
@@ -103,7 +103,9 @@ menu.addEventListener("click", hideMenuWithLink);
  cardsMain.addEventListener("click", showPopup);
  document.body.addEventListener("click", hidePopupWithBody);
 
-  ///////////////////////////////////////////PAGINATION 
+
+
+///////////////////////////////////////////PAGINATION 
 
 const buttonFirstPage = document.getElementById("buttonFirstPage");
 const buttonBack = document.getElementById("buttonBack");
@@ -111,91 +113,114 @@ const pageNumber = document.getElementById("pageNumber");
 const buttonNext = document.getElementById("buttonNext");
 const buttonLastPage = document.getElementById("buttonLastPage");
 
-let allCards = [
-   ...animals, 
-   ...animals.sort(()=> Math.random()-0.5),
-   ...animals.sort(()=> Math.random()-0.5),
-   ...animals.sort(()=> Math.random()-0.5),
-   ...animals.sort(()=> Math.random()-0.5),
-   ...animals.sort(()=> Math.random()-0.5),
-]; 
+let allCards = createPetsArr(animals);  
 
 let innerWIdth = window.innerWidth; 
 let cardsInPage = innerWIdth > 900 ? 8 : innerWIdth > 550 ? 6 : 3; 
 let amountOfPages = allCards.length / cardsInPage; 
 let currentPage = 1; 
+let firstCardOnPage = cardsInPage * (currentPage - 1) + 1;
+
+
+function makePage(){
+      for(let i = firstCardOnPage - 1, j = 1; j < cardsInPage + 1; i++,j++){
+         const card = document.querySelector(`.pet-card${j}`);
+         card.id = allCards[i].id; 
+         const img = card.querySelector(".pet-img img");
+         img.src = "../" +  allCards[i].img; 
+         const h3 = card.querySelector(".pet-subtitle");
+         h3.textContent = allCards[i].name; 
+      }
+}
+
+function makeEnabled(btn){
+   btn.classList.remove("pets-btn__desabled");
+   btn.classList.add("pets-btn__enabled");
+}
+
+function makeDesabled(btn){
+   btn.classList.add("pets-btn__desabled");
+   btn.classList.remove("pets-btn__enabled");
+}
+
+function setPage(){
+   pageNumber.textContent = currentPage; 
+   firstCardOnPage = cardsInPage * (currentPage - 1) + 1;
+   makePage(); 
+}
+
+function nextPage(){
+   if(currentPage >= amountOfPages){
+      return; 
+   }
+
+   makeEnabled(buttonFirstPage);
+   makeEnabled(buttonBack);
+
+   if(currentPage == amountOfPages - 1){
+      makeDesabled(buttonLastPage);
+      makeDesabled(buttonNext);
+   }
+   currentPage++; 
+   setPage();
+}
+
+function backPage(){
+   if(currentPage == 1){
+      return; 
+   }
+   makeEnabled(buttonLastPage);
+   makeEnabled(buttonNext);
+
+   if(currentPage == 2){
+      makeDesabled(buttonFirstPage);
+      makeDesabled(buttonBack);
+   }
+
+   currentPage--; 
+   setPage();
+}
+
+function firstPage(){
+   makeDesabled(buttonFirstPage);
+   makeDesabled(buttonBack);
+   makeEnabled(buttonLastPage);
+   makeEnabled(buttonNext);
+   currentPage = 1; 
+   setPage();
+}
+
+function lastPage(){
+   makeDesabled(buttonLastPage);
+   makeDesabled(buttonNext);
+   makeEnabled(buttonFirstPage);
+   makeEnabled(buttonBack);
+   currentPage = amountOfPages; 
+   setPage();
+}
 
 function changeInnerWIdth(){
    innerWIdth = window.innerWidth; 
    cardsInPage = innerWIdth > 900 ? 8 : innerWIdth > 550 ? 6 : 3; 
    amountOfPages = allCards.length / cardsInPage; 
-   console.log(amountOfPages);
-}
+   currentPage = Math.ceil(firstCardOnPage / cardsInPage); 
+   setPage();
 
-function nextPage(){
-   buttonFirstPage.classList.remove("pets-btn__desabled");
-   buttonFirstPage.classList.add("pets-btn__enabled");
-   buttonBack.classList.remove("pets-btn__desabled");
-   buttonBack.classList.add("pets-btn__enabled");
-   if(currentPage >= amountOfPages){
-      return; 
+   if(currentPage == amountOfPages){
+      makeDesabled(buttonLastPage);
+      makeDesabled(buttonNext);
    }
-   if(currentPage == amountOfPages - 1){
-      buttonLastPage.classList.add("pets-btn__desabled");
-      buttonLastPage.classList.remove("pets-btn__enabled");
-      buttonNext.classList.add("pets-btn__desabled");
-      buttonNext.classList.remove("pets-btn__enabled");
-   }
-   currentPage++; 
-   pageNumber.textContent = currentPage; 
-}
 
-function backPage(){
-   buttonLastPage.classList.remove("pets-btn__desabled");
-   buttonLastPage.classList.add("pets-btn__enabled");
-   buttonNext.classList.remove("pets-btn__desabled");
-   buttonNext.classList.add("pets-btn__enabled");
    if(currentPage == 1){
-      return; 
+      makeDesabled(buttonFirstPage);
+      makeDesabled(buttonBack);
    }
-   if(currentPage == 2){
-      buttonFirstPage.classList.add("pets-btn__desabled");
-      buttonFirstPage.classList.remove("pets-btn__enabled");
-      buttonBack.classList.add("pets-btn__desabled");
-      buttonBack.classList.remove("pets-btn__enabled");
-   }
-   currentPage--; 
-   pageNumber.textContent = currentPage; 
 }
 
-function firstPage(){
-   buttonFirstPage.classList.add("pets-btn__desabled");
-   buttonFirstPage.classList.remove("pets-btn__enabled");
-   buttonBack.classList.add("pets-btn__desabled");
-   buttonBack.classList.remove("pets-btn__enabled");
-   buttonLastPage.classList.remove("pets-btn__desabled");
-   buttonLastPage.classList.add("pets-btn__enabled");
-   buttonNext.classList.remove("pets-btn__desabled");
-   buttonNext.classList.add("pets-btn__enabled");
-   currentPage = 1; 
-   pageNumber.textContent = currentPage; 
-}
-
-function lastPage(){
-   buttonFirstPage.classList.remove("pets-btn__desabled");
-   buttonFirstPage.classList.add("pets-btn__enabled");
-   buttonBack.classList.remove("pets-btn__desabled");
-   buttonBack.classList.add("pets-btn__enabled");
-   buttonLastPage.classList.add("pets-btn__desabled");
-   buttonLastPage.classList.remove("pets-btn__enabled");
-   buttonNext.classList.add("pets-btn__desabled");
-   buttonNext.classList.remove("pets-btn__enabled");
-   currentPage = amountOfPages; 
-   pageNumber.textContent = currentPage; 
-}
 
 window.addEventListener("resize",changeInnerWIdth);
 buttonFirstPage.addEventListener("click", firstPage);
 buttonBack.addEventListener("click", backPage);
 buttonNext.addEventListener("click", nextPage);
 buttonLastPage.addEventListener("click", lastPage);
+

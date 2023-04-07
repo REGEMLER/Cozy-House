@@ -485,101 +485,156 @@
             }
         }
 
-        .friend-card{
-            width: 270px;
-            height: 435px;
-            margin: 0 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $color-link-a;
-            border-radius: 9px 9px 0px 0px;
-            cursor: pointer;
-            transition: background-color linear 1s;
+        .friends-carusel{
+            max-width: 970px;
+            overflow: hidden;
 
-            @media screen and (max-width: 1150px){
-                margin: 0 20px;
+            @media screen and (max-width: 950px){
+                max-width: 570px;
             }
-            @media screen and (max-width: 1000px){
-                margin: 0 10px;
+
+            @media screen and (max-width: 700px){
+                max-width: 270px;
             }
-            @media screen and (max-width: 550px){
-                margin: 0;
-            }
+
             @media screen and (max-width: 430px){
-                width: 332px;
-                order: -1;
-                flex-grow: 2;
+                max-width: 335px;
             }
+
             // Елси это не сделать плохой переход между 430 и 370
             @media screen and (max-width: 369px){
-                width: 270px;;
+                max-width: 270px;;
             }
 
-            &:hover{
-                background-color: $color-white;
+            .friends-inner{
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center; 
 
-                .freind-card-btn{
-                    background-color: $light-color;
-                    transform: scale(1.05);
+                @media screen and (max-width: 430px){
+                    order: -1;
+                    flex-grow: 2;
                 }
-            }
-             
-            .friend-img{
-                width: 270px;
-                height: 270px;
-                object-fit: cover;
 
-                img{
-                    width: 100%;
-                    height: 100%;
+                .friends-section{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; 
+    
+                    @media screen and (max-width: 430px){
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
                 }
-            }
-
-            .friend-subtitle{
-                @extend %subtitle; 
-                text-align: center;
-                color: $color-title;
-                margin-top: 30px;
-                letter-spacing: 0.06em;
-            }
-
-            .freind-card-btn{
-                @extend %btn; 
-                display: block;
-                width: 185px;
-                margin: 30px auto;
-                height: 50px;
-                color: $color-btn;
-                padding: 15px 45px;
-                border-radius: 100px;
-                border: 2px solid $primary-color;
-                background-color: $color-white;
-                cursor: pointer;
-                transition:  background-color linear 1s, transform linear 1s;
-
-                &:active{
-                    transform: scale(0.95);
-                    background-color: $primary-color;
-                }
-            }
-        }
-
-        .friend-card:nth-child(4){
-            @media screen and (max-width: 950px){
-                display: none;
-            }
-        }
-
-        .friend-card:nth-child(3){
-            @media screen and (max-width: 700px){
-                display: none;
             }
         }
     }
 }
 
+.friend-card{
+    width: 270px;
+    height: 435px;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-link-a;
+    border-radius: 9px 9px 0px 0px;
+    cursor: pointer;
+    transition: background-color linear 1s;
 
+    @media screen and (max-width: 1150px){
+        margin: 0 20px;
+    }
+    @media screen and (max-width: 1000px){
+        margin: 0 10px;
+    }
+    @media screen and (max-width: 550px){
+        margin: 0;
+    }
+
+
+    &:hover{
+        background-color: $color-white;
+
+        .freind-card-btn{
+            background-color: $light-color;
+            transform: scale(1.05);
+        }
+    }
+     
+    .friend-img{
+        width: 270px;
+        height: 270px;
+        object-fit: cover;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .friend-subtitle{
+        @extend %subtitle; 
+        text-align: center;
+        color: $color-title;
+        margin-top: 30px;
+        letter-spacing: 0.06em;
+    }
+
+    .freind-card-btn{
+        @extend %btn; 
+        display: block;
+        width: 185px;
+        margin: 30px auto;
+        height: 50px;
+        color: $color-btn;
+        padding: 15px 45px;
+        border-radius: 100px;
+        border: 2px solid $primary-color;
+        background-color: $color-white;
+        cursor: pointer;
+        transition:  background-color linear 1s, transform linear 1s;
+
+        &:active{
+            transform: scale(0.95);
+            background-color: $primary-color;
+        }
+    }
+}
+
+.friend-card3{
+    @media screen and (max-width: 950px){
+        display: none;
+    }
+}
+
+.friend-card2{
+    @media screen and (max-width: 700px){
+        display: none;
+    }
+}
+
+@keyframes slider-left{
+    from{ left: 0px;}
+    to{left: -1050px;} 
+}
+
+@keyframes slider-right{
+    from{ left: 0px;}
+    to{left: 1050px;} 
+}
+
+.carusel-left{
+    animation-name: slider-left;
+    animation-duration: 3s;
+}
+
+.carusel-right{
+    animation-name: slider-right;
+    animation-duration: 3s;
+}
 
 
 //////////////////////////////////////////////////////HELP

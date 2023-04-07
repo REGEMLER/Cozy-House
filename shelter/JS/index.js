@@ -103,3 +103,33 @@ menu.addEventListener("click", hideMenuWithLink);
 
  cardsMain.addEventListener("click", showPopup);
  document.body.addEventListener("click", hidePopupWithBody);
+
+ //////////////////////////////////////////SLIDER
+
+ const arrowLeft = document.querySelector(".friends-left");
+ const arrowRight = document.querySelector(".friends-right"); 
+ const carusel = document.querySelector(".friends-inner"); 
+
+ function moveLeft() { 
+   carusel.classList.remove("carusel-right"); 
+   carusel.classList.add("carusel-left");
+   arrowLeft.removeEventListener("click", moveLeft);
+ }
+
+ function moveRight() {
+   carusel.classList.remove("carusel-left"); 
+   carusel.classList.add("carusel-right");
+   arrowRight.removeEventListener("click", moveLeft);
+ }
+
+ function animed(){
+   carusel.classList.remove("carusel-left"); 
+   carusel.classList.remove("carusel-right"); 
+   arrowLeft.addEventListener("click", moveLeft);
+   arrowRight.addEventListener("click", moveRight);
+ }
+
+ arrowLeft.addEventListener("click", moveLeft);
+ arrowRight.addEventListener("click", moveRight);
+
+ carusel.addEventListener("animationend", animed); 

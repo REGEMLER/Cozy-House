@@ -111,20 +111,69 @@ menu.addEventListener("click", hideMenuWithLink);
  const carusel = document.querySelector(".friends-inner"); 
 
  function moveLeft() { 
-   carusel.classList.remove("carusel-right"); 
    carusel.classList.add("carusel-left");
    arrowLeft.removeEventListener("click", moveLeft);
+   arrowRight.removeEventListener("click", moveRight);
  }
 
  function moveRight() {
-   carusel.classList.remove("carusel-left"); 
    carusel.classList.add("carusel-right");
-   arrowRight.removeEventListener("click", moveLeft);
+   arrowRight.removeEventListener("click", moveRight);
+   arrowLeft.removeEventListener("click", moveLeft);
  }
 
- function animed(){
-   carusel.classList.remove("carusel-left"); 
-   carusel.classList.remove("carusel-right"); 
+ function animed(event){
+
+   const leftItems = document.querySelector(".friends-back");
+   const centreItems = document.querySelector(".friends-center");
+   const rightItems = document.querySelector(".friends-forward");
+
+
+   if(event.animationName === "slider-left"){
+      carusel.classList.remove("carusel-left"); 
+      leftItems.innerHTML = centreItems.innerHTML; 
+      centreItems.innerHTML = rightItems.innerHTML; 
+
+      let newCardsArr = [...animals].filter(item => {
+         const card1 = centreItems.querySelector(".friend-card1");
+         const card2 = centreItems.querySelector(".friend-card2");
+         const card3 = centreItems.querySelector(".friend-card3");
+         return item.id !== card1.id && item.id !== card2.id && item.id !== card3.id; 
+      }).sort(() => Math.random() - 0.5);
+
+      console.log(newCardsArr);
+
+      for(let i = 1; i < 4; i++){
+         const card = rightItems.querySelector(`.friend-card${i}`);
+         card.id = newCardsArr[i].id;
+         const img = card.querySelector("img");
+         img.src = newCardsArr[i].img;
+         const h3 = card.querySelector("h3");
+         h3.textContent = newCardsArr[i].name;
+      }
+
+   } else{
+      carusel.classList.remove("carusel-right"); 
+      rightItems.innerHTML = centreItems.innerHTML; 
+      centreItems.innerHTML = leftItems.innerHTML; 
+
+      let newCardsArr = [...animals].filter(item => {
+         const card1 = centreItems.querySelector(".friend-card1");
+         const card2 = centreItems.querySelector(".friend-card2");
+         const card3 = centreItems.querySelector(".friend-card3");
+         return item.id !== card1.id && item.id !== card2.id && item.id !== card3.id; 
+      }).sort(() => Math.random() - 0.5);
+
+      for(let i = 1; i < 4; i++){
+         const card = leftItems.querySelector(`.friend-card${i}`);
+         card.id = newCardsArr[i].id;
+         const img = card.querySelector("img");
+         img.src = newCardsArr[i].img;
+         const h3 = card.querySelector("h3");
+         h3.textContent = newCardsArr[i].name;
+      }
+   }
+
    arrowLeft.addEventListener("click", moveLeft);
    arrowRight.addEventListener("click", moveRight);
  }

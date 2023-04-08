@@ -473,10 +473,10 @@
 
             &:hover{
                 transform: scale(1.05);
+                background-color: $primary-color;
             }
             &:active{
                 transform: scale(0.95);
-                background-color: $primary-color;
             }
 
             img{
@@ -499,6 +499,8 @@
 
             @media screen and (max-width: 430px){
                 max-width: 335px;
+                order: -1;
+                flex-grow: 2;
             }
 
             // Елси это не сделать плохой переход между 430 и 370
@@ -511,11 +513,6 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center; 
-
-                @media screen and (max-width: 430px){
-                    order: -1;
-                    flex-grow: 2;
-                }
 
                 .friends-section{
                     display: flex;
@@ -616,24 +613,72 @@
     }
 }
 
-@keyframes slider-left{
+@keyframes slider-right{
     from{ left: 0px;}
     to{left: -1050px;} 
 }
 
-@keyframes slider-right{
+@keyframes slider-right-mid{
+    from{ left: 0px;}
+    to{left: -580px;} 
+}
+
+@keyframes slider-right-small{
+    from{ left: 0px;}
+    to{left: -270px;} 
+}
+
+@keyframes slider-left{
     from{ left: 0px;}
     to{left: 1050px;} 
+}
+
+@keyframes slider-left-mid{
+    from{ left: 0px;}
+    to{left: 580px;} 
+}
+
+@keyframes slider-left-small{
+    from{ left: 0px;}
+    to{left: 270px;} 
 }
 
 .carusel-left{
     animation-name: slider-left;
     animation-duration: 3s;
+
+    @media screen and (max-width: 950px){
+        animation-name: slider-left-mid;
+        animation-duration: 2s;
+    }
+
+    @media screen and (max-width: 700px){
+        animation-name: slider-left-small;
+        animation-duration: 1s;
+    }
 }
 
 .carusel-right{
     animation-name: slider-right;
     animation-duration: 3s;
+
+    @media screen and (max-width: 950px){
+        animation-name: slider-right-mid;
+        animation-duration: 2s;
+    }
+
+    @media screen and (max-width: 700px){
+        animation-name: slider-right-small;
+        animation-duration: 1s;
+    }
+}
+
+.friends-back, .friends-forward{
+    opacity: 0;
+}
+
+.slide__animated{
+    opacity: 1;
 }
 
 

@@ -104,74 +104,65 @@ menu.addEventListener("click", hideMenuWithLink);
  cardsMain.addEventListener("click", showPopup);
  document.body.addEventListener("click", hidePopupWithBody);
 
+
+
  //////////////////////////////////////////SLIDER
 
  const arrowLeft = document.querySelector(".friends-left");
  const arrowRight = document.querySelector(".friends-right"); 
  const carusel = document.querySelector(".friends-inner"); 
 
+ const leftItems = document.querySelector(".friends-back");
+ const centreItems = document.querySelector(".friends-center");
+ const rightItems = document.querySelector(".friends-forward");
+
+ function createNewSlides(direction){
+   let newCardsArr = [...animals].filter(item => {
+      const card1 = centreItems.querySelector(".friend-card1");
+      const card2 = centreItems.querySelector(".friend-card2");
+      const card3 = centreItems.querySelector(".friend-card3");
+      return item.id !== card1.id && item.id !== card2.id && item.id !== card3.id; 
+   }).sort(() => Math.random() - 0.5);
+
+   for(let i = 1; i < 4; i++){
+      const card = direction.querySelector(`.friend-card${i}`);
+      card.id = newCardsArr[i].id;
+      const img = card.querySelector("img");
+      img.src = newCardsArr[i].img;
+      const h3 = card.querySelector("h3");
+      h3.textContent = newCardsArr[i].name;
+   }
+ }
+
  function moveLeft() { 
    carusel.classList.add("carusel-left");
+   leftItems.classList.add("slide__animated");
    arrowLeft.removeEventListener("click", moveLeft);
    arrowRight.removeEventListener("click", moveRight);
  }
 
  function moveRight() {
    carusel.classList.add("carusel-right");
+   rightItems.classList.add("slide__animated");
    arrowRight.removeEventListener("click", moveRight);
    arrowLeft.removeEventListener("click", moveLeft);
  }
 
  function animed(event){
 
-   const leftItems = document.querySelector(".friends-back");
-   const centreItems = document.querySelector(".friends-center");
-   const rightItems = document.querySelector(".friends-forward");
-
-
-   if(event.animationName === "slider-left"){
+   if(event.animationName === "slider-left" || event.animationName === "slider-left-mid" || event.animationName === "slider-left-small"){
       carusel.classList.remove("carusel-left"); 
-      leftItems.innerHTML = centreItems.innerHTML; 
-      centreItems.innerHTML = rightItems.innerHTML; 
-
-      let newCardsArr = [...animals].filter(item => {
-         const card1 = centreItems.querySelector(".friend-card1");
-         const card2 = centreItems.querySelector(".friend-card2");
-         const card3 = centreItems.querySelector(".friend-card3");
-         return item.id !== card1.id && item.id !== card2.id && item.id !== card3.id; 
-      }).sort(() => Math.random() - 0.5);
-
-      console.log(newCardsArr);
-
-      for(let i = 1; i < 4; i++){
-         const card = rightItems.querySelector(`.friend-card${i}`);
-         card.id = newCardsArr[i].id;
-         const img = card.querySelector("img");
-         img.src = newCardsArr[i].img;
-         const h3 = card.querySelector("h3");
-         h3.textContent = newCardsArr[i].name;
-      }
+      leftItems.classList.remove("slide__animated");
+      rightItems.innerHTML = centreItems.innerHTML; 
+      centreItems.innerHTML = leftItems.innerHTML; 
+      createNewSlides(leftItems);
 
    } else{
       carusel.classList.remove("carusel-right"); 
-      rightItems.innerHTML = centreItems.innerHTML; 
-      centreItems.innerHTML = leftItems.innerHTML; 
-
-      let newCardsArr = [...animals].filter(item => {
-         const card1 = centreItems.querySelector(".friend-card1");
-         const card2 = centreItems.querySelector(".friend-card2");
-         const card3 = centreItems.querySelector(".friend-card3");
-         return item.id !== card1.id && item.id !== card2.id && item.id !== card3.id; 
-      }).sort(() => Math.random() - 0.5);
-
-      for(let i = 1; i < 4; i++){
-         const card = leftItems.querySelector(`.friend-card${i}`);
-         card.id = newCardsArr[i].id;
-         const img = card.querySelector("img");
-         img.src = newCardsArr[i].img;
-         const h3 = card.querySelector("h3");
-         h3.textContent = newCardsArr[i].name;
-      }
+      rightItems.classList.remove("slide__animated");
+      leftItems.innerHTML = centreItems.innerHTML; 
+      centreItems.innerHTML = rightItems.innerHTML; 
+      createNewSlides(rightItems);
    }
 
    arrowLeft.addEventListener("click", moveLeft);
@@ -180,5 +171,4 @@ menu.addEventListener("click", hideMenuWithLink);
 
  arrowLeft.addEventListener("click", moveLeft);
  arrowRight.addEventListener("click", moveRight);
-
  carusel.addEventListener("animationend", animed); 

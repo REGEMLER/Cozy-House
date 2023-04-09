@@ -22,6 +22,7 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialMT.TTF") format("truetype");
@@ -30,6 +31,7 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -56,14 +58,22 @@ a {
   text-decoration: none;
 }
 
+
 .footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
+
+.footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1 {
+
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
+
   .footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1, .popup-content .popup-info .popup-title {
+
+  .footer-item .footer-title, .bg__main-pets .pets-title2, .bg__main-pets .pets-title1 {
+
     font-size: 25px;
     line-height: 32.5px;
   }
@@ -841,6 +851,7 @@ a {
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialMT.TTF") format("truetype");
@@ -849,6 +860,7 @@ a {
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -875,14 +887,22 @@ a {
   text-decoration: none;
 }
 
+
 .footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
+
+.footer-item .footer-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
+
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 35px;
   line-height: 45.5px;
 }
 @media screen and (max-width: 550px) {
+
   .footer-item .footer-title, .popup-content .popup-info .popup-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
+
+  .footer-item .footer-title, .bg__main-pets .pets-title1, .bg__main-pets .pets-title2 {
+
     font-size: 25px;
     line-height: 32.5px;
   }

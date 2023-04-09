@@ -22,7 +22,6 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialMT.TTF") format("truetype");
@@ -31,7 +30,6 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -1251,7 +1249,7 @@ a {
   }
 }
 .container__help .help-title {
-  max-width: 310px;
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
   color: #545454;
@@ -1681,7 +1679,6 @@ a {
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialMT.TTF") format("truetype");
@@ -1690,7 +1687,6 @@ a {
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 * {
   margin: 0;
   padding: 0;

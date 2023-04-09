@@ -22,7 +22,6 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Arial";
   src: url("../fonts/ArialMT.TTF") format("truetype");
@@ -31,7 +30,6 @@
   font-family: "Georgia";
   src: url("../fonts/Georgia.ttf") format("truetype");
 }
-
 * {
   margin: 0;
   padding: 0;

@@ -13,5 +13,7 @@ https://regemler.github.io/Cozy-House/shelter/
 - попап для карточек животных на обеих страницах
 - бесконечный слайдер-карусель на странице `main`
 - пагинация на странице `pets`
+  
 [Макет в figma](https://www.figma.com/file/Yk6EnbY63FyG2PJTFkJDMh/shelter)
+
 [Ссылка на полную версию задания в RS School](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/shelter/shelter.md)
